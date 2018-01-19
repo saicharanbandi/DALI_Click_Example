@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2017-12-19 Di 09:09 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Foo X. Bar" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org710c832">1. File: Dali-pub.h</a></li>
+<li><a href="#org0075a18">2. File Type: C - Header File</a></li>
+<li><a href="#org1bc69f5">3. Project Name: DALI definitions</a></li>
+<li><a href="#orga257b9c">4. Company: (c) mikroElektronika, 2012</a></li>
+<li><a href="#org9c50980">5. Revision History:</a></li>
+<li><a href="#org4095552">6. - initial release;</a></li>
+<li><a href="#orgb23a61f">7. Description:</a></li>
+<li><a href="#org8348733">8. This project contains definitions used by API functions for DALI protocol4.</a></li>
+<li><a href="#orgadd2aa1">9. Target:</a></li>
+<li><a href="#org5bbdd31">10. MCU:             STM32F407VG</a></li>
+<li><a href="#org4f8ed7d">11. Dev.Board:       EasyMx PRO v7 for STM32 ARM</a></li>
+<li><a href="#org286642c">12. Oscillator:      168MHz</a></li>
+<li><a href="#org5fccaf2">13. SW:              mikroC PRO for ARM</a></li>
+<li><a href="#orgbc08a0d">14. NOTES:</a></li>
+<li><a href="#org235ed04">15. This project will be used to test Dali</a></li>
+</ul>
+</div>
+</div>
+<p>
+#+BEGIN<sub>SRC</sub> C
+/**************************************************************************************************
+</p>
+<div id="outline-container-org710c832" class="outline-2">
+<h2 id="org710c832"><span class="section-number-2">1</span> File: Dali-pub.h</h2>
+</div>
+<div id="outline-container-org0075a18" class="outline-2">
+<h2 id="org0075a18"><span class="section-number-2">2</span> File Type: C - Header File</h2>
+</div>
+<div id="outline-container-org1bc69f5" class="outline-2">
+<h2 id="org1bc69f5"><span class="section-number-2">3</span> Project Name: DALI definitions</h2>
+</div>
+<div id="outline-container-orga257b9c" class="outline-2">
+<h2 id="orga257b9c"><span class="section-number-2">4</span> Company: (c) mikroElektronika, 2012</h2>
+</div>
+<div id="outline-container-org9c50980" class="outline-2">
+<h2 id="org9c50980"><span class="section-number-2">5</span> Revision History:</h2>
+</div>
+<div id="outline-container-org4095552" class="outline-2">
+<h2 id="org4095552"><span class="section-number-2">6</span> - initial release;</h2>
+</div>
+<div id="outline-container-orgb23a61f" class="outline-2">
+<h2 id="orgb23a61f"><span class="section-number-2">7</span> Description:</h2>
+</div>
+<div id="outline-container-org8348733" class="outline-2">
+<h2 id="org8348733"><span class="section-number-2">8</span> This project contains definitions used by API functions for DALI protocol4.</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+*
+</p>
+</div>
+</div>
+<div id="outline-container-orgadd2aa1" class="outline-2">
+<h2 id="orgadd2aa1"><span class="section-number-2">9</span> Target:</h2>
+</div>
+<div id="outline-container-org5bbdd31" class="outline-2">
+<h2 id="org5bbdd31"><span class="section-number-2">10</span> MCU:             STM32F407VG</h2>
+</div>
+<div id="outline-container-org4f8ed7d" class="outline-2">
+<h2 id="org4f8ed7d"><span class="section-number-2">11</span> Dev.Board:       EasyMx PRO v7 for STM32 ARM</h2>
+</div>
+
+<div id="outline-container-org286642c" class="outline-2">
+<h2 id="org286642c"><span class="section-number-2">12</span> Oscillator:      168MHz</h2>
+</div>
+<div id="outline-container-org5fccaf2" class="outline-2">
+<h2 id="org5fccaf2"><span class="section-number-2">13</span> SW:              mikroC PRO for ARM</h2>
+</div>
+
+<div id="outline-container-orgbc08a0d" class="outline-2">
+<h2 id="orgbc08a0d"><span class="section-number-2">14</span> NOTES:</h2>
+</div>
+<div id="outline-container-org235ed04" class="outline-2">
+<h2 id="org235ed04"><span class="section-number-2">15</span> This project will be used to test Dali</h2>
+<div class="outline-text-2" id="text-15">
+<p>
+**************************************************************************************************/
+#ifndef DALI<sub>H</sub>
+#define DALI<sub>H</sub>
+</p>
+
+<p>
+#define LOW<sub>POWER</sub><sub>TIMEOUT</sub>       2000 // 2 seconds to go to sleep/halt
+</p>
+
+<p>
+#define DALI<sub>START</sub><sub>BIT</sub><sub>PULSE</sub>        0
+#define DALI<sub>END</sub><sub>BIT</sub><sub>PULSE</sub>          1
+</p>
+
+<p>
+<i>/Constants for dali<sub>state</sub>
+#define DALI<sub>IDLE</sub>                        0  /</i> DALI sender: idle mode
+#define DALI<sub>SEND</sub><sub>START</sub>                  1  <i>/ DALI sender: send start condition
+#define DALI<sub>SEND</sub><sub>ADDRESS</sub>                2  /</i> Send address bits
+#define DALI<sub>SEND</sub><sub>DATA</sub>                   3  <i>/ Send data bits
+#define DALI<sub>SEND</sub><sub>STOP</sub>                   4  /</i> Send stop bits
+#define DALI<sub>SEND</sub><sub>SETTLING</sub>               5  <i>/ Wait settling time
+#define DALI<sub>SEND</sub><sub>WAIT</sub>                   6  /</i> Waiting for answer frame
+</p>
+
+<p>
+//Constants for dali<sub>receive</sub><sub>status</sub>
+#define DALI<sub>READY</sub><sub>TO</sub><sub>RECEIVE</sub>            0
+#define DALI<sub>NEW</sub><sub>FRAME</sub><sub>RECEIVED</sub>          1
+#define DALI<sub>RECEIVE</sub><sub>OVERFLOW</sub>            2
+</p>
+
+<p>
+//Constants for dali<sub>error</sub>
+#define DALI<sub>NO</sub><sub>ERROR</sub>                    0
+#define DALI<sub>INTERFACE</sub><sub>FAILURE</sub><sub>ERROR</sub>     1
+</p>
+
+<p>
+#define ADDR<sub>BALLAST</sub><sub>MEM</sub>                 0x20004000
+</p>
+
+<p>
+//for ballast memory - offsets
+#define BALLAST<sub>SHORT</sub><sub>ADDRESS</sub>            0x00
+#define BALLAST<sub>ACTUAL</sub><sub>DIM</sub><sub>LEVEL</sub>         0x01
+#define BALLAST<sub>POWER</sub><sub>ON</sub><sub>LEVEL</sub>           0x02
+#define BALLAST<sub>SYSTEM</sub><sub>FAILURE</sub><sub>LEVEL</sub>     0x03
+#define BALLAST<sub>MIN</sub><sub>LEVEL</sub>                0x04
+#define BALLAST<sub>MAX</sub><sub>LEVEL</sub>                0x05
+#define BALLAST<sub>FADE</sub><sub>RATE</sub>                0x06
+#define BALLAST<sub>FADE</sub><sub>TIME</sub>                0x07
+#define BALLAST<sub>SEARCH</sub><sub>ADDRESS</sub><sub>H</sub>         0x08
+#define BALLAST<sub>SEARCH</sub><sub>ADDRESS</sub><sub>M</sub>         0x09
+#define BALLAST<sub>SEARCH</sub><sub>ADDRESS</sub><sub>L</sub>         0x0A
+#define BALLAST<sub>RANDOM</sub><sub>ADDRESS</sub><sub>H</sub>         0x0B
+#define BALLAST<sub>RANDOM</sub><sub>ADDRESS</sub><sub>M</sub>         0x0C
+#define BALLAST<sub>RANDOM</sub><sub>ADDRESS</sub><sub>L</sub>         0x0D
+#define BALLAST<sub>GROUP</sub><sub>0</sub><sub>7</sub>                0x0E
+#define BALLAST<sub>GROUP</sub><sub>8</sub><sub>15</sub>               0x0F
+#define BALLAST<sub>SCENE</sub><sub>01</sub>                 0x10
+#define BALLAST<sub>SCENE</sub><sub>02</sub>                 0x11
+#define BALLAST<sub>SCENE</sub><sub>03</sub>                 0x12
+#define BALLAST<sub>SCENE</sub><sub>04</sub>                 0x13
+#define BALLAST<sub>SCENE</sub><sub>05</sub>                 0x14
+#define BALLAST<sub>SCENE</sub><sub>06</sub>                 0x15
+#define BALLAST<sub>SCENE</sub><sub>07</sub>                 0x16
+#define BALLAST<sub>SCENE</sub><sub>08</sub>                 0x17
+#define BALLAST<sub>SCENE</sub><sub>09</sub>                 0x18
+#define BALLAST<sub>SCENE</sub><sub>10</sub>                 0x19
+#define BALLAST<sub>SCENE</sub><sub>11</sub>                 0x1A
+#define BALLAST<sub>SCENE</sub><sub>12</sub>                 0x1B
+#define BALLAST<sub>SCENE</sub><sub>13</sub>                 0x1C
+#define BALLAST<sub>SCENE</sub><sub>14</sub>                 0x1D
+#define BALLAST<sub>SCENE</sub><sub>15</sub>                 0x1E
+#define BALLAST<sub>SCENE</sub><sub>16</sub>                 0x1F
+#define BALLAST<sub>STATUS</sub><sub>INFORMATION</sub>       0x20
+#define BALLAST<sub>VERSION</sub><sub>NUMBER</sub>           0x21
+#define BALLAST<sub>PHYSICAL</sub><sub>MIN</sub><sub>LEVEL</sub>       0x22
+</p>
+
+<p>
+#define BALLAST<sub>SLAVE</sub><sub>OFFSET</sub>             0x23 //every 35 places
+</p>
+
+
+
+<p>
+#define TRUE                      1
+#define FALSE                     0
+</p>
+
+<p>
+//DALI states
+#define NO<sub>ACTION</sub>                        0
+#define SENDING<sub>DATA</sub>                     1
+#define RECEIVING<sub>DATA</sub>                   2
+#define ERR                              3
+#define SETTLING<sub>FF</sub><sub>TO</sub><sub>BF</sub>                4
+#define SETTLING<sub>FF</sub><sub>TO</sub><sub>FF</sub>                5
+#define BACKWARD<sub>FRAME</sub><sub>RECEIVED</sub>          6
+#define FORWARD<sub>FRAME</sub><sub>SENT</sub>               7
+#define SETTLING<sub>FF</sub><sub>TO</sub><sub>BF</sub><sub>FINISHED</sub>       8
+#define SETTLING<sub>FF</sub><sub>TO</sub><sub>FF</sub><sub>FINISHED</sub>       9
+#define WAIT<sub>FOR</sub><sub>BACKCHANNEL</sub><sub>TO</sub><sub>RECEIVE</sub>  10
+</p>
+
+<p>
+#define BACKWARD<sub>FRAME</sub><sub>SENT</sub>              11
+#define FORWARD<sub>FRAME</sub><sub>RECEIVED</sub>           12
+</p>
+
+<p>
+extern unsigned char dali<sub>state</sub>;
+</p>
+
+<p>
+extern sfr sbit _OUT<sub>LINE</sub>;
+extern sfr sbit _IN<sub>LINE</sub>;
+</p>
+
+<p>
+//encoded dali cmd data. Ready for send
+extern volatile unsigned char dali<sub>array</sub><sub>cmd</sub>[17]; //regular DALI command
+extern volatile unsigned char dali<sub>array</sub><sub>receive</sub><sub>buffer</sub>[9];
+</p>
+
+<p>
+typedef struct LightObject
+{
+  unsigned char _address;
+  unsigned char _on;
+  unsigned char _arcLevel;
+  unsigned char _group0<sub>7</sub>;
+  unsigned char _group8<sub>15</sub>;
+  unsigned char _to<sub>fade</sub>;
+}
+LightObjectType;
+</p>
+
+<p>
+typedef struct LightCommandStruct
+{
+  unsigned char _ballastAddress;
+  unsigned char _command;
+  unsigned char _typeOfCommand;
+  unsigned char _followingType;
+}
+LightCommandType;
+</p>
+
+<p>
+//set settling flag status
+//extern volatile unsigned char settling<sub>state</sub>;
+extern volatile unsigned char expect<sub>backchannel</sub>;
+//slave device
+extern volatile unsigned char expected<sub>response</sub>;
+extern volatile unsigned char wait<sub>for</sub><sub>second</sub><sub>cmd</sub>;      <i><i>used when slave device needs to wait for the second same command to arrive
+<i>/</i></i></i>
+extern volatile unsigned char actual<sub>val</sub>;
+extern volatile unsigned char former<sub>val</sub>;
+</p>
+
+<p>
+//initialise DALI; Ballast&#x2026;
+void DALI<sub>Init</sub>();
+//initialise mem space
+void DALI<sub>Mem</sub><sub>Init</sub>(void);
+//read from memory
+unsigned char DALI<sub>Read</sub>(unsigned char addrToRead);
+//write to memory
+void DALI<sub>Write</sub>(unsigned char addrToWrite, unsigned char dataToWrite);
+//send cmd to ballast
+//use address 25 and 37 hex
+unsigned char DALI<sub>Send</sub><sub>Cmd</sub>(unsigned char ballastAddr, unsigned char cmd,
+                            unsigned char typeOfCmd, unsigned char followingType);
+</p>
+
+<p>
+unsigned char DALI<sub>Send</sub><sub>Cmd</sub><sub>New</sub>(unsigned char ballastAddr, unsigned char cmd, unsigned char followingCmd);
+</p>
+
+<p>
+unsigned char DALI<sub>Check</sub><sub>Special</sub><sub>Cmd</sub>(unsigned char addrByte);
+</p>
+
+<p>
+void DALI<sub>Receiving</sub><sub>Data</sub>(void);
+</p>
+
+<p>
+unsigned char DALI<sub>Get</sub><sub>Ballast</sub><sub>Answer</sub>(void);
+</p>
+
+<p>
+void DALI<sub>Sending</sub><sub>Data</sub>(void);
+</p>
+
+<p>
+void PrepareDataToSend(unsigned char *commandArray, unsigned char *tx<sub>array</sub>,
+                       unsigned char butesInCmd);
+</p>
+
+<p>
+void PrepareAddressByte(unsigned char *commandArray, unsigned char addressType,
+                        unsigned char byteAddressPosition, unsigned char followingType);
+</p>
+
+<p>
+unsigned char DALI<sub>Master</sub><sub>Status</sub>(void);
+#endif
+</p>
+
+<p>
+#+END<sub>SRC</sub>
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Foo X. Bar</p>
+<p class="date">Created: 2017-12-19 Di 09:09</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

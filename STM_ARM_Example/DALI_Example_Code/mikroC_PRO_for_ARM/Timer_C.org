@@ -1,0 +1,205 @@
+#+BEGIN_SRC C
+#include <DALI-pub.h>
+#include <Timer.h>
+
+
+volatile unsigned char timer_1ms_state;
+volatile unsigned int tick_count;
+volatile unsigned char bit_count;
+
+extern volatile unsigned char dali_array_cmd[17]; //regulat DALI command
+extern volatile unsigned char dali_array_receive_buffer[9];
+
+extern sfr sbit _OUT_LINE;
+extern sfr sbit _IN_LINE;
+
+/*******************************************************************************
+Function:       Timer_DALI_Init
+
+Description:    Initialise Timer for DALI network
+
+
+Note:           Timer 2 is in use
+*******************************************************************************/
+
+void Timer_DALI_Init()
+{
+  //reset out/in line pins
+  _OUT_LINE = 1;
+  _IN_LINE  = 1;
+
+  //reset tick and bit counters
+  tick_count = 0;
+  bit_count = 0;
+
+  //timer 2 register settings
+  //interrupt time ~ 104us
+  RCC_APB1ENRbits.TIM2EN = 1;
+  TIM2_CR1bits.CEN = 0;
+  TIM2_PSC = 2900; //3400;
+  TIM2_ARR = 5;     //4
+  NVIC_IntEnable(IVT_INT_TIM2);
+  TIM2_DIERbits.UIE = 1;
+
+}
+
+
+/*******************************************************************************
+Function:       Timer_Stop
+Description:    Stop timer if it is active.
+
+*******************************************************************************/
+
+void Timer_Stop(void)
+{
+  if(TIM2_CR1bits.CEN == 1)
+    TIM2_CR1bits.CEN = 0;
+}
+
+
+/*******************************************************************************
+Function:       Timer_Start
+Description:    Start timer if it is stopped
+
+*******************************************************************************/
+
+void Timer_Start(void)
+{
+  if(TIM2_CR1bits.CEN == 0)
+    TIM2_CR1bits.CEN = 1;
+   
+  //reset tick and bit counters
+  tick_count = 0;
+  bit_count = 0;
+}
+
+/*******************************************************************************
+Function:       Timer_Set_Settling_Time
+Description:    Check and set dali state for settling time.
+
+Parameters:     settlingTimeType - type of the settling time
+
+*******************************************************************************/
+
+void Timer_Set_Settling_Time(unsigned char settlingTimeType)
+{
+  //check if timer is OFF
+  if(TIM2_CR1bits.CEN == 0)
+    TIM2_CR1bits.CEN = 1;
+  
+  //check if forward frame was sent
+  if(dali_state == FORWARD_FRAME_SENT)
+  {
+    //reset timer tick counter
+    tick_count = 0;
+    
+    //set type of settling time
+    //forward frame -> forward frame
+    if (settlingTimeType == SETTLING_FF_TO_FF)
+      dali_state = SETTLING_FF_TO_FF;
+    else
+    //set type of settling time
+    //forward frame -> backward frame
+    if (settlingTimeType == SETTLING_FF_TO_BF)
+      dali_state = SETTLING_FF_TO_BF;
+  }
+}
+
+/*******************************************************************************
+Function:       Timer2_interrupt
+Description:    Interrupt function for timer 2
+
+*******************************************************************************/
+
+void Timer2_interrupt() iv IVT_INT_TIM2 {
+
+  unsigned char i;
+  volatile unsigned char pulsePosition;
+
+  //reset interrupt flag
+  TIM2_SRbits.UIF = 0;
+
+
+  //GPIOA_ODRbits.ODR4 = ~GPIOA_ODRbits.ODR4;
+  //if dali state is not idle
+  if(dali_state != NO_ACTION)
+  {
+    //check if data is sending
+    if(dali_state == SENDING_DATA)
+    {
+      //send data to slave device
+      DALI_Sending_Data();
+    }
+    //receiving state - ready and receiving backward frame - 11 bits
+    if(dali_state == RECEIVING_DATA)
+    {
+      //check and receive data from IN line
+      DALI_Receiving_Data();
+    }
+  }
+  else  //dali_state == NO_ACTION. Idle state
+  {
+    //if there is signal on both lines, set ERROR flag
+    /*if(_IN_LINE == 0 && _OUT_LINE == 0)
+    {
+      dali_state = ERR;
+      return;
+    }*/
+    //check if there is 1 in Input line
+    //this is the first (start) bit in backward frame
+    
+    //if(_IN_LINE == 0) //nema potrebe
+    //  dali_state = RECEIVING_DATA;
+  }
+  
+  if(dali_state == WAIT_FOR_BACKCHANNEL_TO_RECEIVE)
+  {
+    former_val = actual_val;
+    actual_val = _IN_LINE;
+  
+    if(tick_count > 200) //timeout -> max wait time 9.17 ~ 9.2ms
+    {
+      //no response -> answer 'NO'
+      //set dali state to NO_ACTION - idle
+      dali_state = NO_ACTION;
+      //there wasn't response from slave device... answer is 'NO' or 0000 0000
+      for(i = 0; i < 8; i++)
+        dali_array_receive_buffer[i] = 0;
+    }
+    else
+    {
+      //check if there is a difference in IN line
+      if(former_val != actual_val)
+      {
+        //set state to RECEIVING
+        dali_state = RECEIVING_DATA;
+        tick_count = 0;
+        bit_count  = 0; //add start bit
+      }
+    }
+
+    tick_count++;
+  }
+  
+  //settling time between forward -> forward or backward -> forward ~ 22 Te (2Te = 8 IT)
+  //or forward -> backward ~ 7 to 22Te
+  if(dali_state == SETTLING_FF_TO_BF || dali_state == SETTLING_FF_TO_FF)
+  {
+    if(dali_state == SETTLING_FF_TO_FF)
+    {
+      //settling time finished (22Te = 88 IT)
+      if(tick_count > 104) // -16
+        dali_state = SETTLING_FF_TO_FF_FINISHED;
+    }
+    
+    if(dali_state == SETTLING_FF_TO_BF)
+    {
+      //settling time finished (7Te = 28 IT)
+      if(tick_count > 28) // -16
+        dali_state = SETTLING_FF_TO_BF_FINISHED;
+    }
+    tick_count++;
+  }
+}
+
+#+END_SRC

@@ -1,0 +1,840 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2017-12-19 Di 09:07 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Foo X. Bar" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div class="org-src-container">
+<pre class="src src-C"><span style="color: #b218b2;">#include</span> <span style="color: #ff1f8b;">&lt;DALI-pub.h&gt;</span>
+<span style="color: #b218b2;">#include</span> <span style="color: #ff1f8b;">&lt;Timer.h&gt;</span>
+<span style="color: #b218b2;">#include</span> <span style="color: #ff1f8b;">&lt;DALI_defs.h&gt;</span>
+
+<span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> *<span style="color: #ff8700;">ptrAddr</span>;
+
+<span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">dali_state</span>;
+
+<span style="color: #00af00;">volatile</span> <span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">dali_array_cmd</span>[17];
+<span style="color: #00af00;">volatile</span> <span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">dali_array_receive_buffer</span>[9];
+
+<span style="color: #00af00;">volatile</span> <span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">expect_backchannel</span>;
+<span style="color: #00af00;">volatile</span> <span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">expected_response</span>;
+
+<span style="color: #00af00;">volatile</span> <span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">tmpg</span>;
+
+<span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">actual_val</span>;
+<span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">former_val</span>;
+
+<span style="color: #00af00;">volatile</span> <span style="color: #18b2b2;">LightObjectType</span> <span style="color: #ff8700;">lightLeds</span>[10];
+
+<span style="color: #b2b2b2; font-style: italic;">/*******************************************************************************</span>
+<span style="color: #b2b2b2; font-style: italic;">Function:       DALI_Init</span>
+<span style="color: #b2b2b2; font-style: italic;">Description:    Initialise DALI network</span>
+
+<span style="color: #b2b2b2; font-style: italic;">Note:           Main function used for DALI initialisation.</span>
+<span style="color: #b2b2b2; font-style: italic;">******************************************************************************</span><span style="color: #b2b2b2; font-style: italic;">*/</span>
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">DALI_init</span>(<span style="color: #18b2b2;">void</span>)
+{
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">set start/default values for flags</span>
+  dali_state = NO_ACTION;
+
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">Initialise Timer module</span>
+  Timer_DALI_Init();
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">Initialise memory space and default values</span>
+  DALI_Mem_Init();
+}
+
+<span style="color: #b2b2b2; font-style: italic;">/*******************************************************************************</span>
+<span style="color: #b2b2b2; font-style: italic;">Function:       DALI_Mem_Init</span>
+<span style="color: #b2b2b2; font-style: italic;">Description:    Initialise memory space in SRAM where ballasts data will be stored</span>
+
+<span style="color: #b2b2b2; font-style: italic;">NOTE:           Initialise memory for ballasts and groups. To change start location</span>
+<span style="color: #b2b2b2; font-style: italic;">                change variable ADDR_BALLASR_MEM, defined in DALI_pub.h</span>
+<span style="color: #b2b2b2; font-style: italic;">******************************************************************************</span><span style="color: #b2b2b2; font-style: italic;">*/</span>
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">DALI_Mem_Init</span>(<span style="color: #18b2b2;">void</span>)
+{
+  <span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">i</span>, <span style="color: #ff8700;">tmp</span>;
+
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">set pointer to the start location of memory space</span>
+  ptrAddr = ADDR_BALLAST_MEM;
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">loop through all 64 ballasts</span>
+  <span style="color: #00af00;">for</span>( i = 1; i &lt; 65; i++){
+    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">reset address value</span>
+    tmp = 0;
+    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">shift address value to left -&gt; YAAA AAAS 0-63</span>
+    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">A - represents address bits</span>
+    tmp = i &lt;&lt; 1;
+    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">write address value to memory</span>
+    *ptrAddr = tmp;
+    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">increment pointer location</span>
+    ptrAddr++;
+    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">reset pointer value - write default value for ballast data</span>
+    *ptrAddr = 0;
+    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">increment pointer location for next iteration</span>
+    ptrAddr++;
+  }
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">loop through all 16 groups</span>
+  <span style="color: #00af00;">for</span> ( i = 1; i &lt; 17; i++){
+    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">reset group value</span>
+    tmp = 0;
+    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">shift address value to left -&gt; YAAA AAAS</span>
+    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">A - represents address bits</span>
+    tmp = i &lt;&lt; 1;
+    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">set correct format for group address -&gt; 100A AAAS 0-15</span>
+    tmp = GROUP_ADDRESS + tmp;
+    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">write address value to memory</span>
+    *ptrAddr = tmp;
+    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">increment pointer location</span>
+    ptrAddr++;
+    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">write default value for group data</span>
+    *ptrAddr = 0;
+    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">increment pointer location for next iteration</span>
+    ptrAddr++;
+  }
+
+}
+<span style="color: #b2b2b2; font-style: italic;">/*******************************************************************************</span>
+<span style="color: #b2b2b2; font-style: italic;">Function:       DALI_READ</span>
+<span style="color: #b2b2b2; font-style: italic;">Description:    Read DALI data from memory</span>
+
+<span style="color: #b2b2b2; font-style: italic;">Inputs:         * addrToRead - Address of ballast which is going to be read</span>
+
+<span style="color: #b2b2b2; font-style: italic;">Output:         stored value</span>
+<span style="color: #b2b2b2; font-style: italic;">******************************************************************************</span><span style="color: #b2b2b2; font-style: italic;">*/</span>
+<span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ef2929;">DALI_Read</span>(<span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">addrToRead</span>)
+{
+  <span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">loc</span>;
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">set pointer to start location in memory for ballast data</span>
+  ptrAddr = ADDR_BALLAST_MEM;
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">find location for specific ballast</span>
+  loc = addrToRead * 2 + 1;
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">set pointer to that location</span>
+  ptrAddr += loc;
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">return stored data</span>
+  <span style="color: #00af00;">return</span> *ptrAddr;
+}
+<span style="color: #b2b2b2; font-style: italic;">/*******************************************************************************</span>
+<span style="color: #b2b2b2; font-style: italic;">Function:       DALI_Write</span>
+<span style="color: #b2b2b2; font-style: italic;">Description:    Write DALI data to memory</span>
+
+<span style="color: #b2b2b2; font-style: italic;">Inputs:         * addrToWrite - Address of the ballast</span>
+<span style="color: #b2b2b2; font-style: italic;">                * dataToWrite - Data to write</span>
+<span style="color: #b2b2b2; font-style: italic;">******************************************************************************</span><span style="color: #b2b2b2; font-style: italic;">*/</span>
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">DALI_Write</span>(<span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">addrToWrite</span>, <span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">dataToWrite</span>)
+{
+  <span style="color: #00af00;">volatile</span> <span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">loc</span>;
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">set pointer to start location in memory for ballast data</span>
+  ptrAddr = ADDR_BALLAST_MEM;
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">find location for specific ballast</span>
+  loc = addrToWrite * 2 + 1;
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">set pointer to that location</span>
+  ptrAddr += loc;
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">write data</span>
+  *ptrAddr = dataToWrite;
+}
+
+<span style="color: #b2b2b2; font-style: italic;">/******************************************************************************</span>
+<span style="color: #b2b2b2; font-style: italic;">Function:       DALI_Send_Cmd</span>
+<span style="color: #b2b2b2; font-style: italic;">Description:    Send DALI command over DALI protocol</span>
+
+<span style="color: #b2b2b2; font-style: italic;">Inputs:         * ballastAddr - Address of the ballast (dimmer)</span>
+
+<span style="color: #b2b2b2; font-style: italic;">                * cmd         - Command which is going to be sent (see DALI_defs.h for list</span>
+<span style="color: #b2b2b2; font-style: italic;">                              of commands)</span>
+
+<span style="color: #b2b2b2; font-style: italic;">                * typeOfCmd   - It's used to define type of address:</span>
+<span style="color: #b2b2b2; font-style: italic;">                                - BROADCAST_DIRECT</span>
+<span style="color: #b2b2b2; font-style: italic;">                                - BROADCAST_CMD</span>
+<span style="color: #b2b2b2; font-style: italic;">                                - SHORT_ADDRESS</span>
+<span style="color: #b2b2b2; font-style: italic;">                                - GROUP_ADDRESS</span>
+
+<span style="color: #b2b2b2; font-style: italic;">                * followingType - Status of the last bit in address byte.</span>
+<span style="color: #b2b2b2; font-style: italic;">                                  - FOLLOWING_DIRECT_ARC_POWER_LVL</span>
+<span style="color: #b2b2b2; font-style: italic;">                                  - FOLLOWING_COMMAND</span>
+
+<span style="color: #b2b2b2; font-style: italic;">Output:      TRUE</span>
+<span style="color: #b2b2b2; font-style: italic;">*****************************************************************************</span><span style="color: #b2b2b2; font-style: italic;">*/</span>
+<span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ef2929;">DALI_Send_Cmd</span>(<span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">ballastAddr</span>, <span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">cmd</span>,
+                            <span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">typeOfCmd</span>, <span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">followingType</span>)
+{
+  <span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">data_array</span>[2];
+  <span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">i</span>;
+
+
+ <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">set output pin to 0</span>
+  _OUT_LINE = 1;
+
+  tick_count = 0;
+  bit_count  = 0;
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">set DALI state to send data</span>
+  dali_state = SENDING_DATA;
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">fetch ballast address and command</span>
+  data_array[0] = (<span style="color: #18b2b2;">char</span>)ballastAddr;
+  data_array[1] = (<span style="color: #18b2b2;">char</span>)cmd;
+
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">reset dali_array_cmd values</span>
+  <span style="color: #00af00;">for</span> (i = 0; i &lt; 17; i++)         <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">16</span>
+    dali_array_cmd[i] = 0;
+
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">prepare address byte to be sent</span>
+  PrepareAddressByte(data_array, typeOfCmd, 0, followingType);
+
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">encode data - Manchester encoding</span>
+  PrepareDataToSend(data_array, dali_array_cmd, 2);
+
+  <span style="color: #b2b2b2; font-style: italic;">////</span><span style="color: #b2b2b2; font-style: italic;">write datballastAddrto memory address</span>
+  DALI_Write(ballastAddr, data_array[1]);
+
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">check type of command</span>
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">set backchannel</span>
+  <span style="color: #00af00;">if</span>((cmd &gt;= 0x00) &amp;&amp; (cmd &lt;= 0x1F)) <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">Indirect arc power control commands</span>
+  {
+    expect_backchannel   = FALSE;
+  }
+  <span style="color: #00af00;">if</span>((cmd &gt;= 20) &amp;&amp; (cmd &lt;= 0x80)) <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">Configurations commands</span>
+  {
+    expect_backchannel = FALSE;
+  }
+  <span style="color: #00af00;">if</span>((cmd &gt;= 0x90))                <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">Query commands</span>
+  {
+    expect_backchannel = TRUE;     <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">set status to expect Backchannel. Posible answer:</span>
+                                   <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">1111 1111                             - YES</span>
+                                   <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">no response; no ba1ckchannel received  - NO</span>
+                                   <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">8bit info                             - 8 bit</span>
+  }
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">check for special command</span>
+  <span style="color: #00af00;">if</span>(DALI_Check_Special_Cmd(data_array[0]))
+  {
+    expect_backchannel = TRUE;
+    <span style="color: #b2b2b2; font-style: italic;">//</span>
+    <span style="color: #00af00;">if</span>(data_array[0] == TERMINATE_H_BITS || data_array[0] == DTR)
+      expect_backchannel = FALSE;
+    <span style="color: #00af00;">else</span> <span style="color: #00af00;">if</span>(data_array[0] == VERIFY_SHORT_ADDRESS || data_array[0] == QUERY_SHORT_ADDRESS_H)
+      expect_backchannel = TRUE;
+    <span style="color: #00af00;">else</span>
+      expect_backchannel = FALSE;
+
+
+  }
+
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">start timer</span>
+  Timer_Start();
+
+  <span style="color: #00af00;">return</span> TRUE;
+}
+
+<span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ef2929;">DALI_Check_Special_Cmd</span>(<span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">addrByte</span>)
+{
+  <span style="color: #00af00;">volatile</span> <span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">addrToCheck</span>;
+
+  addrToCheck = addrByte;    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">get address byte</span>
+  <span style="color: #00af00;">if</span> ((addrToCheck == 0x90) || (addrToCheck == 0xA0)) <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">check for 1010 or 1011</span>
+  {
+    <span style="color: #00af00;">if</span>(addrToCheck &amp; 0x01) <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">LSB must be 1</span>
+      <span style="color: #00af00;">return</span> TRUE;
+    <span style="color: #00af00;">else</span>
+      <span style="color: #00af00;">return</span> FALSE;
+  }
+  <span style="color: #00af00;">else</span>
+  {
+    <span style="color: #00af00;">return</span> FALSE;
+  }
+}
+
+<span style="color: #b2b2b2; font-style: italic;">/*******************************************************************************</span>
+<span style="color: #b2b2b2; font-style: italic;">Function:       DALI_Receiving_Data</span>
+<span style="color: #b2b2b2; font-style: italic;">Description:    Check status of IN line and write to array</span>
+
+<span style="color: #b2b2b2; font-style: italic;">Note:           Manchester encoding</span>
+
+<span style="color: #b2b2b2; font-style: italic;">******************************************************************************</span><span style="color: #b2b2b2; font-style: italic;">*/</span>
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">DALI_Receiving_Data</span>(<span style="color: #18b2b2;">void</span>)
+{
+  <span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">pulsePosition</span>;
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">backward frame - 9 bits to receive - last 2 don't change phase</span>
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">first bit is start bit (1), ignore, also last 2 bits are stop bits</span>
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">FF - BF settlling time 7Te - 22Te (2Te = 8 interrupt intervals)</span>
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">when change on pin is detected, tick_count is restarted.</span>
+
+  <span style="color: #00af00;">if</span>(tick_count == (<span style="color: #18b2b2;">bit_count</span> * 8 + 2))
+  {
+    <span style="color: #00af00;">if</span>(_IN_LINE == 1)
+      dali_array_receive_buffer[bit_count] = 0;
+    <span style="color: #00af00;">else</span>
+      dali_array_receive_buffer[bit_count] = 1;
+  }
+
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">increment ticks</span>
+  tick_count++;
+
+  <span style="color: #00af00;">if</span>((tick_count + 1) % 8 == 0)
+  {
+    bit_count++;
+  }
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">transfer completed</span>
+  <span style="color: #00af00;">if</span>(bit_count &gt; 8)
+  {
+    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">set dali state</span>
+    dali_state = BACKWARD_FRAME_RECEIVED;
+  }
+}
+
+<span style="color: #b2b2b2; font-style: italic;">/*******************************************************************************</span>
+<span style="color: #b2b2b2; font-style: italic;">Function:       DALI_Sending_Data</span>
+<span style="color: #b2b2b2; font-style: italic;">Description:    Check status of IN line and write to array</span>
+
+<span style="color: #b2b2b2; font-style: italic;">Note:           Manchester encoding</span>
+
+<span style="color: #b2b2b2; font-style: italic;">******************************************************************************</span><span style="color: #b2b2b2; font-style: italic;">*/</span>
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">DALI_Sending_Data</span>(<span style="color: #18b2b2;">void</span>)
+{
+  <span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">pulsePosition</span>;
+
+  <span style="color: #00af00;">if</span>(tick_count &lt; 8)
+  {
+    <span style="color: #00af00;">if</span>(tick_count &lt; 4)
+      _OUT_LINE = 0;
+    <span style="color: #00af00;">else</span>
+      _OUT_LINE = 1;
+  }
+  <span style="color: #00af00;">else</span>
+  <span style="color: #00af00;">if</span>(bit_count &lt; 17)
+  {
+    <span style="color: #00af00;">if</span>(tick_count % 4 == 0)
+    {
+      pulsePosition = tick_count / 4;
+      <span style="color: #00af00;">if</span>(pulsePosition % 2 == 0)
+      {
+        <span style="color: #00af00;">if</span>(dali_array_cmd[bit_count] == DALI_START_BIT_PULSE)
+          _OUT_LINE = 1;
+        <span style="color: #00af00;">else</span>
+          _OUT_LINE = 0;
+      }
+      <span style="color: #00af00;">else</span>
+      {
+        <span style="color: #00af00;">if</span>(dali_array_cmd[bit_count] == DALI_START_BIT_PULSE)
+          _OUT_LINE = 0;
+        <span style="color: #00af00;">else</span>
+          _OUT_LINE = 1;
+      }
+    }
+  }
+  tick_count++;
+
+  <span style="color: #00af00;">if</span>(tick_count % 8 == 0)
+    bit_count++;
+
+  <span style="color: #00af00;">if</span>(bit_count &gt; 16)
+  {
+    dali_state = FORWARD_FRAME_SENT;
+    _OUT_LINE = 1;
+  }
+}
+
+
+
+<span style="color: #b2b2b2; font-style: italic;">/*******************************************************************************</span>
+<span style="color: #b2b2b2; font-style: italic;">Function:       PrepareDataToSend</span>
+<span style="color: #b2b2b2; font-style: italic;">Description:    Prepare command array to be encoded and create new array where</span>
+<span style="color: #b2b2b2; font-style: italic;">                every element is a bit.</span>
+
+<span style="color: #b2b2b2; font-style: italic;">Parameters:     * commandArray - Array of bytes values</span>
+
+<span style="color: #b2b2b2; font-style: italic;">                * tx_array     - Return array. Each element represents bit state</span>
+
+<span style="color: #b2b2b2; font-style: italic;">                * bytesInCmd   - Number of bytes in command array</span>
+
+
+<span style="color: #b2b2b2; font-style: italic;">Note:           Manchester encoding</span>
+
+<span style="color: #b2b2b2; font-style: italic;">******************************************************************************</span><span style="color: #b2b2b2; font-style: italic;">*/</span>
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">PrepareDataToSend</span>(<span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> *<span style="color: #ff8700;">commandArray</span>, <span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> *<span style="color: #ff8700;">tx_array</span>, 
+                       <span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">bytesInCmd</span>)
+{
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">set default valur for the mask</span>
+  <span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">mask</span> = 0x80;
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">variable which hold one byte value - one element from commandArray</span>
+  <span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">dummy</span>;
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">number of bytes in command</span>
+  <span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">bytes_counter</span>;
+  <span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">i</span>;
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">number of active bit</span>
+  <span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">bitCounter</span>;
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">set default value</span>
+  bitCounter = 0;
+
+  <span style="color: #00af00;">for</span> (i = 0; i &lt; 9; i++)
+  {
+    tx_array[0] = 0;
+  }
+
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">loop through all bytes in commandArray</span>
+  <span style="color: #00af00;">for</span>(bytes_counter = 0; bytes_counter &lt; bytesInCmd; bytes_counter++)
+  {
+    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">assign byte for use</span>
+    dummy = commandArray[bytes_counter];
+    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">set mask to default value</span>
+    mask = 0x80;
+    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">increment number of active bit</span>
+    bitCounter++;
+
+    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">check if active bit is the first one</span>
+    <span style="color: #00af00;">if</span>(bitCounter == 1)
+    {
+      <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">start bit is always 1 - in manchester that is END_BIT_PULSE</span>
+      tx_array[0] = DALI_END_BIT_PULSE;
+    }
+    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">2 byte command</span>
+    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">go through all bytes and use Manchester</span>
+    <span style="color: #00af00;">for</span>(i = 1; i &lt; 9; i++) <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">1 &amp; 9</span>
+    {
+      <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">check if bit is one</span>
+      <span style="color: #00af00;">if</span>(dummy &amp; mask)
+      {
+        <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">assign pulse value - manchester</span>
+        tx_array[i + (8 * bytes_counter)] = DALI_END_BIT_PULSE;
+      }
+      <span style="color: #00af00;">else</span>
+      {
+        <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">assign pulse value - manchester</span>
+        tx_array[i + (8 * bytes_counter)] = DALI_START_BIT_PULSE;
+      }
+      <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">check mask value</span>
+      <span style="color: #00af00;">if</span>(mask == 0x01)
+        mask &lt;&lt;= 7;     <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">shift mask bit to MSB</span>
+      <span style="color: #00af00;">else</span>
+        mask &gt;&gt;= 1;     <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">shift mask bit to 1 right</span>
+    }
+  }
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">tx_array[17] = DALI_END_BIT_PULSE;</span>
+
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">add 2 stop bits at the end</span>
+<span style="color: #b2b2b2; font-style: italic;">/*</span><span style="color: #b2b2b2; font-style: italic;">for (i = 1; i &lt; 3; i++)</span>
+<span style="color: #b2b2b2; font-style: italic;">  {</span>
+<span style="color: #b2b2b2; font-style: italic;">    //assign pulse value - manchester</span>
+<span style="color: #b2b2b2; font-style: italic;">    tx_array[16 + i] = DALI_END_BIT_PULSE;</span>
+<span style="color: #b2b2b2; font-style: italic;">  }</span><span style="color: #b2b2b2; font-style: italic;">*/</span>
+}
+
+<span style="color: #b2b2b2; font-style: italic;">/*******************************************************************************</span>
+<span style="color: #b2b2b2; font-style: italic;">Function:       PrepareAddressByte</span>
+<span style="color: #b2b2b2; font-style: italic;">Description:    Prepare address byte.</span>
+
+<span style="color: #b2b2b2; font-style: italic;">Parameters:     * commandArray - Array of bytes values</span>
+
+<span style="color: #b2b2b2; font-style: italic;">                * addressType  - It's used to define type of address:</span>
+<span style="color: #b2b2b2; font-style: italic;">                                 - BROADCAST_DIRECT</span>
+<span style="color: #b2b2b2; font-style: italic;">                                 - BROADCAST_CMD</span>
+<span style="color: #b2b2b2; font-style: italic;">                                 - SHORT_ADDRESS</span>
+<span style="color: #b2b2b2; font-style: italic;">                                 - GROUP_ADDRESS</span>
+
+<span style="color: #b2b2b2; font-style: italic;">                * byteAddressPosition - Index of element in array which holds address</span>
+<span style="color: #b2b2b2; font-style: italic;">                                        value</span>
+
+<span style="color: #b2b2b2; font-style: italic;">                * followingType       - value of the last bit in address byte. Defines</span>
+<span style="color: #b2b2b2; font-style: italic;">                                        if data byte holds command or direct arc value</span>
+<span style="color: #b2b2b2; font-style: italic;">                                        - FOLLOWING_DIRECT_ARC_POWER_LVL</span>
+<span style="color: #b2b2b2; font-style: italic;">                                        - FOLLOWING_COMMAND</span>
+<span style="color: #b2b2b2; font-style: italic;">******************************************************************************</span><span style="color: #b2b2b2; font-style: italic;">*/</span>
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">PrepareAddressByte</span>(<span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> *<span style="color: #ff8700;">commandArray</span>, <span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">addressType</span>,
+                        <span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">byteAddressPosition</span>, <span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">followingType</span>)
+{
+  <span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">addr_tmp</span>;
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">broadcast command to all ballasts</span>
+  <span style="color: #00af00;">if</span>(addressType == BROADCAST_CMD)
+  {
+    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">set address byte to Broadcast command - value 0xFF</span>
+    commandArray[byteAddressPosition] = BROADCAST_CMD;
+  }
+  <span style="color: #00af00;">else</span>
+  {
+    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">fetch address value from array to operate</span>
+    addr_tmp = commandArray[byteAddressPosition];
+
+    <span style="color: #00af00;">if</span> (addressType == BROADCAST_DIRECT)
+      <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">broadcast direct arc level to all ballasts - value 0xFE</span>
+      commandArray[byteAddressPosition] = BROADCAST_DIRECT;
+    <span style="color: #00af00;">else</span>
+    {
+      <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">shift address value for 1 to left</span>
+      addr_tmp &lt;&lt;= 1;
+
+      <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">check if the command byte is following address byte</span>
+      <span style="color: #00af00;">if</span>(followingType == FOLLOWING_COMMAND)
+        <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">set LSB</span>
+        addr_tmp |= 0x01;
+      <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">if it is a group address</span>
+      <span style="color: #00af00;">if</span> (addressType == GROUP_ADDRESS)
+        <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">add group value to address byte</span>
+        addr_tmp |= GROUP_ADDRESS;
+      <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">assign return value</span>
+      commandArray[byteAddressPosition] = addr_tmp;
+    }
+  }
+}
+
+<span style="color: #b2b2b2; font-style: italic;">/*******************************************************************************</span>
+<span style="color: #b2b2b2; font-style: italic;">Function:       DALI_Get_Ballast_Answer</span>
+<span style="color: #b2b2b2; font-style: italic;">Description:    Encode and write received data. Check in dali_array_receive_buffer</span>
+
+<span style="color: #b2b2b2; font-style: italic;">Output:         Return ballast answer</span>
+<span style="color: #b2b2b2; font-style: italic;">                - YES  : 1111 1111</span>
+<span style="color: #b2b2b2; font-style: italic;">                - NO   : 0</span>
+<span style="color: #b2b2b2; font-style: italic;">                - 8bit : XXXX XXXX - 8bit value</span>
+
+<span style="color: #b2b2b2; font-style: italic;">******************************************************************************</span><span style="color: #b2b2b2; font-style: italic;">*/</span>
+
+<span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ef2929;">DALI_Get_Ballast_Answer</span>(<span style="color: #18b2b2;">void</span>)
+{
+  <span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">i</span>;
+  <span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">receivedData</span>;
+
+  <span style="color: #00af00;">for</span> (i = 0; i &lt; 8; i++)
+  {
+    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">shift bit to the right position</span>
+    dali_array_receive_buffer[i] &lt;&lt;= i;
+    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">add bit to the received byte</span>
+    receivedData |= dali_array_receive_buffer[i];
+  }
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">return received byte</span>
+  <span style="color: #00af00;">return</span> receivedData;
+}
+
+<span style="color: #b2b2b2; font-style: italic;">/*******************************************************************************</span>
+<span style="color: #b2b2b2; font-style: italic;">Function:       DALI_Master_Status</span>
+<span style="color: #b2b2b2; font-style: italic;">Description:    DALI master device main loop</span>
+
+<span style="color: #b2b2b2; font-style: italic;">Output:         Return DALI state</span>
+
+<span style="color: #b2b2b2; font-style: italic;">******************************************************************************</span><span style="color: #b2b2b2; font-style: italic;">*/</span>
+
+<span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ef2929;">DALI_Master_Status</span>(<span style="color: #18b2b2;">void</span>)
+{
+  <span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">i</span>;
+
+  <span style="color: #00af00;">if</span>(dali_state == NO_ACTION)
+    {
+      <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">idle state</span>
+      <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">reset variables</span>
+      tick_count = 0;
+      bit_count  = 0;
+    }
+
+    <span style="color: #00af00;">if</span>(dali_state == SENDING_DATA)
+    {
+      <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">sending commands</span>
+
+    }
+    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">data can be received only if master device send a command</span>
+    <span style="color: #00af00;">if</span>(dali_state == RECEIVING_DATA)
+    {
+      <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">backchannel</span>
+      <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">check for backchannel timeout; used for NO answer</span>
+
+    }
+    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">forward frame sent. Check for settling time</span>
+    <span style="color: #00af00;">if</span>(dali_state == FORWARD_FRAME_SENT)
+    {
+      tick_count = 0;
+      bit_count  = 0;
+
+      <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">dali_cmd_repeat_time--;</span>
+      _OUT_LINE = 1;
+
+      <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">set settling time</span>
+      <span style="color: #00af00;">if</span>(expect_backchannel)
+        dali_state = SETTLING_FF_TO_BF;
+      <span style="color: #00af00;">else</span>
+        dali_state = SETTLING_FF_TO_FF;
+    }
+
+    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">backward frame received. Set settling state</span>
+    <span style="color: #00af00;">if</span>(dali_state == BACKWARD_FRAME_RECEIVED)
+    {
+      <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">backward frame full received</span>
+      <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">check for settling time</span>
+      <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">settling_state = SETTLING_FF_TO_FF; //FF -&gt; FF &amp; BF -&gt; FF</span>
+      <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">dali_state = SETTLING_FF_TO_FF;</span>
+
+      dali_state = NO_ACTION;
+      expect_backchannel = 0;
+    }
+
+    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">check if settling is finished</span>
+    <span style="color: #00af00;">if</span>(dali_state == SETTLING_FF_TO_FF_FINISHED || dali_state == SETTLING_FF_TO_BF_FINISHED)
+    {
+      dali_state = NO_ACTION;
+
+      <span style="color: #00af00;">if</span>(expect_backchannel)
+      {
+        dali_state = WAIT_FOR_BACKCHANNEL_TO_RECEIVE;
+
+        former_val = 1;
+        actual_val = 1;
+      }
+    }
+    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">if we wait for backchannel, check _IN_LINE</span>
+    <span style="color: #00af00;">if</span>(dali_state == WAIT_FOR_BACKCHANNEL_TO_RECEIVE)
+    {
+      former_val = actual_val;
+      actual_val = _IN_LINE;
+
+      <span style="color: #00af00;">if</span>(former_val != actual_val)
+      {
+        tick_count = 0;
+        bit_count  = 0; <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">add start bit</span>
+        dali_state = RECEIVING_DATA;
+      }
+    }
+
+    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">error part</span>
+    <span style="color: #00af00;">if</span>(dali_state == ERR)
+    {
+      _OUT_LINE  = 1;
+      _IN_LINE   = 1;
+    }
+
+    <span style="color: #00af00;">return</span> dali_state;
+}
+
+</pre>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Foo X. Bar</p>
+<p class="date">Created: 2017-12-19 Di 09:07</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

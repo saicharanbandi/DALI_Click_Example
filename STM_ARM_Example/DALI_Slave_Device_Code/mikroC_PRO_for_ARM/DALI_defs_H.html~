@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2017-12-06 Mi 12:26 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Foo X. Bar" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div class="org-src-container">
+<pre class="src src-C"><span style="color: #b2b2b2; font-style: italic;">/**************************************************************************************************</span>
+<span style="color: #b2b2b2; font-style: italic;"> File: Dali_defs.h</span>
+<span style="color: #b2b2b2; font-style: italic;"> File Type: C - Header File</span>
+<span style="color: #b2b2b2; font-style: italic;"> Project Name: DALI definitions</span>
+<span style="color: #b2b2b2; font-style: italic;"> Company: (c) mikroElektronika, 2012</span>
+<span style="color: #b2b2b2; font-style: italic;"> Revision History:</span>
+<span style="color: #b2b2b2; font-style: italic;">       - initial release;</span>
+<span style="color: #b2b2b2; font-style: italic;"> Description:</span>
+<span style="color: #b2b2b2; font-style: italic;">     This project contains definitions used by API functions for DALI protocol4.</span>
+
+<span style="color: #b2b2b2; font-style: italic;"> Target:</span>
+<span style="color: #b2b2b2; font-style: italic;">       MCU:             STM32F407VG</span>
+<span style="color: #b2b2b2; font-style: italic;">       Dev.Board:       EasyMx PRO v7 for STM32 ARM</span>
+
+<span style="color: #b2b2b2; font-style: italic;">       Oscillator:      168MHz</span>
+<span style="color: #b2b2b2; font-style: italic;">       SW:              mikroC PRO for ARM</span>
+
+<span style="color: #b2b2b2; font-style: italic;"> NOTES:</span>
+<span style="color: #b2b2b2; font-style: italic;">     This project will be used for test Dali</span>
+<span style="color: #b2b2b2; font-style: italic;">*************************************************************************************************</span><span style="color: #b2b2b2; font-style: italic;">*/</span>
+
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">DALI_EXTENDED_COMMAND</span>           0x03
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">DALI_COMMAND</span>                    0x02
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">DALI_BACKCHANNEL</span>                0x01
+
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">SHORT_ADDRESS</span>                   0x00
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">GROUP_ADDRESS</span>                   0x80
+
+<span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">Broadcast</span>
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">BROADCAST_DIRECT</span>                0xFE
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">BROADCAST_CMD</span>                   0xFF
+
+<span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">for address byte</span>
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">FOLLOWING_DIRECT_ARC_POWER_LVL</span>  0x00
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">FOLLOWING_COMMAND</span>               0x01
+
+
+<span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">Group addresses. Max 16 groups</span>
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">GROUP01_DIRECT_ADDR</span>             0x81
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">GROUP02_DIRECT_ADDR</span>             0x83
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">GROUP03_DIRECT_ADDR</span>             0x85
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">GROUP04_DIRECT_ADDR</span>             0x87
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">GROUP05_DIRECT_ADDR</span>             0x89
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">GROUP06_DIRECT_ADDR</span>             0x8B
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">GROUP07_DIRECT_ADDR</span>             0x8D
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">GROUP08_DIRECT_ADDR</span>             0x8F
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">GROUP09_DIRECT_ADDR</span>             0x91
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">GROUP10_DIRECT_ADDR</span>             0x93
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">GROUP11_DIRECT_ADDR</span>             0x95
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">GROUP12_DIRECT_ADDR</span>             0x97
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">GROUP13_DIRECT_ADDR</span>             0x99
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">GROUP14_DIRECT_ADDR</span>             0x9B
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">GROUP15_DIRECT_ADDR</span>             0x9D
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">GROUP16_DIRECT_ADDR</span>             0x9F
+
+<span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">available addresses 0-63</span>
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS01</span>                       0x00
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS02</span>                       0x01
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS03</span>                       0x02
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS04</span>                       0x03
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS05</span>                       0x04
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS06</span>                       0x05
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS07</span>                       0x06
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS08</span>                       0x07
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS09</span>                       0x08
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS10</span>                       0x09
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS11</span>                       0x0A
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS12</span>                       0x0B
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS13</span>                       0x0C
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS14</span>                       0x0D
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS15</span>                       0x0E
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS16</span>                       0x0F
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS17</span>                       0x10
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS18</span>                       0x11
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS19</span>                       0x12
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS20</span>                       0x13
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS21</span>                       0x14
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS22</span>                       0x15
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS23</span>                       0x16
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS24</span>                       0x17
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS25</span>                       0x18
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS26</span>                       0x19
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS27</span>                       0x1A
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS28</span>                       0x1B
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS29</span>                       0x1C
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS30</span>                       0x1D
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS31</span>                       0x1E
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS32</span>                       0x1F
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS33</span>                       0x20
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS34</span>                       0x21
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS35</span>                       0x22
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS36</span>                       0x23
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS37</span>                       0x24
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS38</span>                       0x25
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS39</span>                       0x26
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS40</span>                       0x27
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS41</span>                       0x28
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS42</span>                       0x29
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS43</span>                       0x2A
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS44</span>                       0x2B
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS45</span>                       0x2C
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS46</span>                       0x2D
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS47</span>                       0x2E
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS48</span>                       0x2F
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS49</span>                       0x30
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS50</span>                       0x31
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS51</span>                       0x32
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS52</span>                       0x33
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS53</span>                       0x34
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS54</span>                       0x35
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS55</span>                       0x36
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS56</span>                       0x37
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS57</span>                       0x38
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS58</span>                       0x39
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS59</span>                       0x3A
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS60</span>                       0x3B
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS61</span>                       0x3C
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS62</span>                       0x3D
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS63</span>                       0x3E
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADDRESS64</span>                       0x3F
+
+<span style="color: #b2b2b2; font-style: italic;">/*****************************</span><span style="color: #b2b2b2; font-style: italic;">Commands****************************************</span><span style="color: #b2b2b2; font-style: italic;">*/</span>
+<span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">Indirect Arc Power Commands</span>
+
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">OFF</span>                             0x00
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">UP</span>                              0x01
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">DOWN</span>                            0x02
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">STEP_UP</span>                         0x03
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">STEP_DOWN</span>                       0x04
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">RECALL_MAX_LEVEL</span>                0x05
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">RECALL_MIN_LEVEL</span>                0x06
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">STEP_DOWN_AND_OFF</span>               0x07
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ON_AND_STEP_UP</span>                  0x08
+
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">GO_TO_SCENE01</span>                   0x10
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">GO_TO_SCENE02</span>                   0x11
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">GO_TO_SCENE03</span>                   0x12
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">GO_TO_SCENE04</span>                   0x13
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">GO_TO_SCENE05</span>                   0x14
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">GO_TO_SCENE06</span>                   0x15
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">GO_TO_SCENE07</span>                   0x16
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">GO_TO_SCENE08</span>                   0x17
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">GO_TO_SCENE09</span>                   0x18
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">GO_TO_SCENE10</span>                   0x19
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">GO_TO_SCENE11</span>                   0x1A
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">GO_TO_SCENE12</span>                   0x1B
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">GO_TO_SCENE13</span>                   0x1C
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">GO_TO_SCENE14</span>                   0x1D
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">GO_TO_SCENE15</span>                   0x1E
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">GO_TO_SCENE16</span>                   0x1F
+
+
+<span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">General Configuration Commands</span>
+
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">RESET</span>                           0x20
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">STORE_ACTUAL_LEVEL_IN_THE_DTR</span>   0x21
+
+
+<span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">Arc Power Parameters Settings</span>
+
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">STORE_THE_DTR_AS_MAX_LEVEL</span>                 0x22
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">STORE_THE_DTR_AS_MIN_LEVEL</span>                 0x23
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">STORE_THE_DTR_AS_SYSTEM_FAILURE_LEVEL</span>      0x2C
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">STORE_THE_DTR_AS_POWER_ON_LEVEL</span>            0x2D
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">STORE_THE_DTR_AS_FADE_TIME</span>                 0x2E
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">STORE_THE_DTR_AS_FADE_RATE</span>                 0x2F
+
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">STORE_THE_DTRAS_SCENE01</span>                    0x40
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">STORE_THE_DTRAS_SCENE02</span>                    0x41
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">STORE_THE_DTRAS_SCENE03</span>                    0x42
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">STORE_THE_DTRAS_SCENE04</span>                    0x43
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">STORE_THE_DTRAS_SCENE05</span>                    0x44
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">STORE_THE_DTRAS_SCENE06</span>                    0x45
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">STORE_THE_DTRAS_SCENE07</span>                    0x46
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">STORE_THE_DTRAS_SCENE08</span>                    0x47
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">STORE_THE_DTRAS_SCENE09</span>                    0x48
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">STORE_THE_DTRAS_SCENE10</span>                    0x49
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">STORE_THE_DTRAS_SCENE11</span>                    0x4A
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">STORE_THE_DTRAS_SCENE12</span>                    0x4B
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">STORE_THE_DTRAS_SCENE13</span>                    0x4C
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">STORE_THE_DTRAS_SCENE14</span>                    0x4D
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">STORE_THE_DTRAS_SCENE15</span>                    0x4E
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">STORE_THE_DTRAS_SCENE16</span>                    0x4F
+
+<span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">System Parameters Settings</span>
+
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">REMOVE_FROM_SCENE01</span>                        0x50
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">REMOVE_FROM_SCENE02</span>                        0x51
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">REMOVE_FROM_SCENE03</span>                        0x52
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">REMOVE_FROM_SCENE04</span>                        0x53
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">REMOVE_FROM_SCENE05</span>                        0x54
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">REMOVE_FROM_SCENE06</span>                        0x55
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">REMOVE_FROM_SCENE07</span>                        0x56
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">REMOVE_FROM_SCENE08</span>                        0x57
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">REMOVE_FROM_SCENE09</span>                        0x58
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">REMOVE_FROM_SCENE10</span>                        0x59
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">REMOVE_FROM_SCENE11</span>                        0x5A
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">REMOVE_FROM_SCENE12</span>                        0x5B
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">REMOVE_FROM_SCENE13</span>                        0x5C
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">REMOVE_FROM_SCENE14</span>                        0x5D
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">REMOVE_FROM_SCENE15</span>                        0x5E
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">REMOVE_FROM_SCENE16</span>                        0x5F
+
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADD_TO_GROUP01</span>                             0x60
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADD_TO_GROUP02</span>                             0x61
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADD_TO_GROUP03</span>                             0x62
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADD_TO_GROUP04</span>                             0x63
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADD_TO_GROUP05</span>                             0x64
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADD_TO_GROUP06</span>                             0x65
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADD_TO_GROUP07</span>                             0x66
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADD_TO_GROUP08</span>                             0x67
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADD_TO_GROUP09</span>                             0x68
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADD_TO_GROUP10</span>                             0x69
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADD_TO_GROUP11</span>                             0x6A
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADD_TO_GROUP12</span>                             0x6B
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADD_TO_GROUP13</span>                             0x6C
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADD_TO_GROUP14</span>                             0x6D
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADD_TO_GROUP15</span>                             0x6E
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ADD_TO_GROUP16</span>                             0x6F
+
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">REMOVE_FROM_GROUP01</span>                        0x70
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">REMOVE_FROM_GROUP02</span>                        0x71
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">REMOVE_FROM_GROUP03</span>                        0x72
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">REMOVE_FROM_GROUP04</span>                        0x73
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">REMOVE_FROM_GROUP05</span>                        0x74
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">REMOVE_FROM_GROUP06</span>                        0x75
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">REMOVE_FROM_GROUP07</span>                        0x76
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">REMOVE_FROM_GROUP08</span>                        0x77
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">REMOVE_FROM_GROUP09</span>                        0x78
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">REMOVE_FROM_GROUP10</span>                        0x79
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">REMOVE_FROM_GROUP11</span>                        0x7A
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">REMOVE_FROM_GROUP12</span>                        0x7B
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">REMOVE_FROM_GROUP13</span>                        0x7C
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">REMOVE_FROM_GROUP14</span>                        0x7D
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">REMOVE_FROM_GROUP15</span>                        0x7E
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">REMOVE_FROM_GROUP16</span>                        0x7F
+
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">STORE_DTR_AS_SHORT_ADDRESS</span>                 0x80
+
+<span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">Status Information Commands</span>
+
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">QUERY_STATUS</span>                               0x90
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">QUERY_BALLAST</span>                              0x91
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">QUERY_LAMP_FAILURE</span>                         0x92
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">QUERY_LAMP_POWER_ON</span>                        0x93
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">QUERY_LIMIT_ERROR</span>                          0x94
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">QUERY_RESET_STATE</span>                          0x95
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">QUERY_MISSING_SHORT_ADDRESS</span>                0x96
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">QUERY_VERSION_NUMBER</span>                       0x97
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">QUERY_CONTENT_DTR</span>                          0x98
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">QUERY_DEVICE_TYPE</span>                          0x99
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">QUERY_PHYSICAL_MINIMUM_LEVEL</span>               0x9A
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">QUERY_POWER_FAILURE</span>                        0x9B
+
+<span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">Arc Power Parameter Settings</span>
+
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">QUERY_ACTUAL_LEVEL</span>                         0xA0
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">QUERY_MAX_LEVEL</span>                            0xA1
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">QUERY_MIN_LEVEL</span>                            0xA2
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">QUERY_POWER_ON_LEVEL</span>                       0xA3
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">QUERY_SYSTEM_FAILURE_LEVEL</span>                 0xA4
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">QUERY_FADE_TIME_FADE_RATE</span>                  0xA5
+
+<span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">Queries Related To The System Parameter Settings</span>
+
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">QUERY_SCENE_LEVEL01</span>                        0xB0
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">QUERY_SCENE_LEVEL02</span>                        0xB1
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">QUERY_SCENE_LEVEL03</span>                        0xB2
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">QUERY_SCENE_LEVEL04</span>                        0xB3
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">QUERY_SCENE_LEVEL05</span>                        0xB4
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">QUERY_SCENE_LEVEL06</span>                        0xB5
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">QUERY_SCENE_LEVEL07</span>                        0xB6
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">QUERY_SCENE_LEVEL08</span>                        0xB7
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">QUERY_SCENE_LEVEL09</span>                        0xB8
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">QUERY_SCENE_LEVEL10</span>                        0xB9
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">QUERY_SCENE_LEVEL11</span>                        0xBA
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">QUERY_SCENE_LEVEL12</span>                        0xBB
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">QUERY_SCENE_LEVEL13</span>                        0xBC
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">QUERY_SCENE_LEVEL14</span>                        0xBD
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">QUERY_SCENE_LEVEL15</span>                        0xBE
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">QUERY_SCENE_LEVEL16</span>                        0xBF
+
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">QUERY_GROUPS_0_7</span>                           0xC0
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">QUERY_GROUPS_8_15</span>                          0xC1
+
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">QUERY_RANDOM_ADDRESS_H</span>                     0xC2
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">QUERY_RANDOM_ADDERSS_M</span>                     0xC3
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">QUERY_RANDOM_ADDRESS_L</span>                     0xC4
+
+<span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">Special Commands</span>
+
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">TERMINATE_H_BITS</span>                           0xA1    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">Address: 0xA100</span>
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">TERMINATE_L_BITS</span>                           0x00    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">1010 0001 0000 0000</span>
+
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">DTR</span>                                        0xA3    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">1010 0011 XXXX XXXX</span>
+
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">INITIALISE</span>                                 0xA5    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">1010 0101 XXXX XXXX</span>
+
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">INITIALISE_ALL_BALLAST_H</span>                   0xA5
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">INITIALISE_ALL_BALLAST_L</span>                   0x00
+
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">INITIALISE_BALLAST_WITHOUT_SHORT_ADDR_H</span>    0xA5
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">INITIALISE_BALLAST_WITHOUT_SHORT_ADDR_L</span>    0xFF
+
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">RANDOMISE_H</span>                                0xA7
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">RANDOMISE_L</span>                                0x00
+
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">COMPARE_H</span>                                  0xA9
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">COMPARE_L</span>                                  0x00
+
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">WITHDRAW_H</span>                                 0xAB
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">WITHDRAW_L</span>                                 0x00
+
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">SEARCHADDRH</span>                                0xB1    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">1011 0001 XXXX XXXX</span>
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">SEARCHADDRM</span>                                0xB3    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">1011 0011 XXXX XXXX</span>
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">SEARCHADDRL</span>                                0xB5    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">1011 1001 XXXX XXXX</span>
+
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">PROGRAM_SHORT_ADDRESS</span>                      0xB7    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">1011 0111 0AAA AAA1</span>
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">VERIFY_SHORT_ADDRESS</span>                       0xB9    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">1011 1001 0AAA AAA1</span>
+
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">QUERY_SHORT_ADDRESS_H</span>                      0xBB    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">1011 1011 0000 0000</span>
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">QUERY_SHORT_ADDRESS_L</span>                      0x00
+
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">PHYSICAL_SELECTION_H</span>                       0xBD    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">1011 1101 0000 0000</span>
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">PHYSICAL_SELECTION_L</span>                       0x00
+
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ENABLE_STANDARD_DEVICE_H</span>                   0xC1    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">1100 0001 0000 0000</span>
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ENABLE_STANDARD_DEVICE_L</span>                   0x00
+
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ENABLE_EMERGENCY_LIGHTS_H</span>                  0xC1    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">1100 0001 0000 0001</span>
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ENABLE_EMERGENCY_LIGHTS_L</span>                  0x01
+
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ENABLE_HID_LAMPS_H</span>                         0xC1    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">1100 0001 0000 0010</span>
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ENABLE_HID_LAMPS_L</span>                         0x02
+
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ENABLE_LOW_V_HALOGEN_LAMPS_H</span>               0xC1    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">1100 0001 0000 0011</span>
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ENABLE_LOW_V_HALOGEN_LAMPS_L</span>               0x03
+
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ENABLE_DIM_INCANDESCENT_LAMPS_H</span>            0xC1    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">1100 0001 0000 0100</span>
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ENABLE_DIM_INCANDESCENT_LAMPS_L</span>            0x04
+
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ENABLE_LED_MODULES_H</span>                       0xC1    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">1100 0001 0000 0110</span>
+<span style="color: #b218b2;">#define</span> <span style="color: #ff8700;">ENABLE_LED_MODULES_L</span>                       0x00
+<span style="color: #b2b2b2; font-style: italic;">/*</span>
+<span style="color: #b2b2b2; font-style: italic;">        0          Fluorescent lamps IEC 62386-201</span>
+<span style="color: #b2b2b2; font-style: italic;">        1          Self-contained emergency lighting IEC 62386-202</span>
+<span style="color: #b2b2b2; font-style: italic;">        2          Discharge lamps (excluding fluorescent lamps) IEC 62386-203</span>
+<span style="color: #b2b2b2; font-style: italic;">        3          Low voltage halogen lamps IEC 62386-204</span>
+<span style="color: #b2b2b2; font-style: italic;">        4          Supply Voltage controller for incandescent lamps IEC 62386-205</span>
+<span style="color: #b2b2b2; font-style: italic;">        5          Conversion from digital into D.C. voltage IEC 62386-206</span>
+<span style="color: #b2b2b2; font-style: italic;">        6          LED modules IEC 62386-207</span>
+<span style="color: #b2b2b2; font-style: italic;">        7          Switching function IEC 62386-208</span>
+<span style="color: #b2b2b2; font-style: italic;">        8          Colour control IEC 62386-209</span>
+<span style="color: #b2b2b2; font-style: italic;">        9          Sequencer IEC 62386-210</span>
+<span style="color: #b2b2b2; font-style: italic;">        10         Optical control IEC 62386-211</span>
+<span style="color: #b2b2b2; font-style: italic;">        11  - 127  Not yet defined</span>
+<span style="color: #b2b2b2; font-style: italic;">        128 - 254  Reserved for control devices</span>
+<span style="color: #b2b2b2; font-style: italic;">        255        Control gear supports more than one device type</span>
+<span style="color: #b2b2b2; font-style: italic;">*/</span>
+
+
+</pre>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Foo X. Bar</p>
+<p class="date">Created: 2017-12-06 Mi 12:26</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

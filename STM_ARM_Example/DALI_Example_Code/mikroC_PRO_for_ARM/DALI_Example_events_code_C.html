@@ -1,0 +1,1091 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2018-01-09 Di 16:24 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Foo X. Bar" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div class="org-src-container">
+<pre class="src src-C"><span style="color: #b218b2;">#include</span> <span style="color: #ff1f8b;">"DALI_Example_objects.h"</span>
+<span style="color: #b218b2;">#include</span> <span style="color: #ff1f8b;">"DALI_Example_resources.h"</span>
+
+<span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">--------------------- User code ---------------------//</span>
+<span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">extern unsigned char dali_status;</span>
+
+<span style="color: #b218b2;">#include</span> <span style="color: #ff1f8b;">"DALI-pub.h"</span>
+<span style="color: #b218b2;">#include</span> <span style="color: #ff1f8b;">"DALI_defs.h"</span>
+
+<span style="color: #00af00;">volatile</span> <span style="color: #18b2b2;">LightCommandType</span> <span style="color: #ff8700;">cmdBroadcastAllOff</span>;
+<span style="color: #00af00;">volatile</span> <span style="color: #18b2b2;">LightCommandType</span> <span style="color: #ff8700;">cmdBroadcastAllOn</span>;
+
+<span style="color: #18b2b2;">LightCommandType</span> <span style="color: #ff8700;">Command1</span>[1];
+
+<span style="color: #18b2b2;">LightObjectType</span> <span style="color: #ff8700;">lightOut01</span>;
+<span style="color: #18b2b2;">LightObjectType</span> <span style="color: #ff8700;">lightOut02</span>;
+<span style="color: #18b2b2;">LightObjectType</span> <span style="color: #ff8700;">lightOut03</span>;
+<span style="color: #18b2b2;">LightObjectType</span> <span style="color: #ff8700;">lightOut04</span>;
+<span style="color: #18b2b2;">LightObjectType</span> <span style="color: #ff8700;">lightOut05</span>;
+<span style="color: #18b2b2;">LightObjectType</span> <span style="color: #ff8700;">lightOut06</span>;
+
+<span style="color: #18b2b2;">LightObjectType</span> <span style="color: #ff8700;">lightIn01</span>;
+<span style="color: #18b2b2;">LightObjectType</span> <span style="color: #ff8700;">lightIn02</span>;
+<span style="color: #18b2b2;">LightObjectType</span> <span style="color: #ff8700;">lightIn03</span>;
+<span style="color: #18b2b2;">LightObjectType</span> <span style="color: #ff8700;">lightIn04</span>;
+
+<span style="color: #18b2b2;">LightObjectType</span> <span style="color: #ff8700;">lightArray</span>[10];
+<span style="color: #18b2b2;">TCircle</span>         <span style="color: #ff8700;">circleArray</span>[6];
+<span style="color: #18b2b2;">TBox</span>            <span style="color: #ff8700;">boxArray</span>[4];
+
+<span style="color: #18b2b2;">TCircle</span>         <span style="color: #ff8700;">circleArcArray</span>[6];
+<span style="color: #18b2b2;">TBox</span>            <span style="color: #ff8700;">boxArcArray</span>[4];
+
+<span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">screen specific variables</span>
+<span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">setSceneIndexBallastSelected</span>;
+<span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">setSceneIndexSceneSelected</span>;
+<span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">setSceneSceneLevel</span>;
+
+<span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">setArcLvlIndexBallastSelected</span>;
+
+<span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">setQueryBallastSelected</span>;
+<span style="color: #b2b2b2; font-style: italic;">///////////////////////////</span>
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">InitialiseLights</span>(<span style="color: #18b2b2;">void</span>);
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">GraphicsSelectLight</span>(<span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">SelectlightId</span>);
+
+
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">InitialiseCommands</span>(<span style="color: #18b2b2;">void</span>)
+{
+  cmdBroadcastAllOff._ballastAddress = ADDRESS01;
+  cmdBroadcastAllOff._command        = OFF;
+  cmdBroadcastAllOff._typeOfCommand  = BROADCAST_CMD;
+  cmdBroadcastAllOff._followingType  = FOLLOWING_COMMAND;
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">recall max value for arc level for all ballast. If the ballast is in OFF state,</span>
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">it will be turned ON</span>
+  cmdBroadcastAllOn._ballastAddress = ADDRESS01;
+  cmdBroadcastAllOn._command        = RECALL_MAX_LEVEL;
+  cmdBroadcastAllOn._typeOfCommand  = BROADCAST_CMD;
+  cmdBroadcastAllOn._followingType  = FOLLOWING_COMMAND;
+}
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">ToggleLight</span>(<span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">lightObjId</span>, <span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">ObjId</span>, <span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">type</span> )
+{
+  <span style="color: #00af00;">if</span>(dali_state == NO_ACTION)
+  {
+    <span style="color: #00af00;">if</span>(lightArray[lightObjId]._on)
+    {
+      lightArray[lightObjId]._on = FALSE;
+      <span style="color: #00af00;">if</span>(type == 0)
+      {
+        circleArray[ObjId].Color = 0xF800;
+        DrawCircle(&amp;circleArray[ObjId]);
+      }
+      <span style="color: #00af00;">else</span>
+      {
+        boxArray[ObjId].Color = 0xF800;
+        DrawBox(&amp;boxArray[ObjId]);
+      }
+      DALI_Send_Cmd(lightArray[lightObjId]._address, OFF, SHORT_ADDRESS, FOLLOWING_COMMAND);
+    }
+    <span style="color: #00af00;">else</span>
+    {
+      lightArray[lightObjId]._on = TRUE;
+      <span style="color: #00af00;">if</span>(type == 0)
+      {
+        circleArray[ObjId].Color = 0xFFE0;
+        DrawCircle(&amp;circleArray[ObjId]);
+      }
+      <span style="color: #00af00;">else</span>
+      {
+        boxArray[ObjId].Color = 0xFFE0;
+        DrawBox(&amp;boxArray[ObjId]);
+      }
+      DALI_Send_Cmd(lightArray[lightObjId]._address, RECALL_MAX_LEVEL, SHORT_ADDRESS, FOLLOWING_COMMAND);
+    }
+  }
+}
+<span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">----------------- End of User code ------------------//</span>
+
+<span style="color: #b2b2b2; font-style: italic;">// </span><span style="color: #b2b2b2; font-style: italic;">Event Handlers</span>
+
+<span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">all btn On</span>
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">Button1OnClick</span>() {
+
+  <span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">i</span>;
+
+  <span style="color: #00af00;">if</span>(dali_state == NO_ACTION)
+  {
+    <span style="color: #00af00;">for</span>(i = 0; i &lt; 10; i++)
+    {
+      lightArray[i]._on = TRUE;
+      lightArray[i]._arcLevel = 254;
+      <span style="color: #00af00;">if</span>(i &lt; 6)
+      {
+        circleArray[i].Color = 0xFFE0;
+        DrawCircle(&amp;circleArray[i]);
+      }
+      <span style="color: #00af00;">if</span>(i &lt; 4)
+      {
+        boxArray[i].Color = 0xFFE0;
+        DrawBox(&amp;boxArray[i]);
+      }
+    }
+    DALI_Send_Cmd(cmdBroadcastAllOn._ballastAddress, cmdBroadcastAllOn._command, cmdBroadcastAllOn._typeOfCommand,
+                cmdBroadcastAllOn._followingType);
+  }
+}
+<span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">all btn OFF</span>
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">Button2OnClick</span>() {
+
+  <span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">i</span>;
+
+  <span style="color: #00af00;">if</span>(dali_state == NO_ACTION)
+    DALI_Send_Cmd(cmdBroadcastAllOff._ballastAddress, cmdBroadcastAllOff._command, cmdBroadcastAllOff._typeOfCommand, 
+                 cmdBroadcastAllOff._followingType);
+
+  <span style="color: #00af00;">for</span>(i = 0; i &lt; 10; i++)
+    {
+      lightArray[i]._on = FALSE;
+      lightArray[i]._arcLevel = 0;
+      <span style="color: #00af00;">if</span>(i &lt; 6)
+      {
+        circleArray[i].Color = 0xF800;
+        DrawCircle(&amp;circleArray[i]);
+      }
+      <span style="color: #00af00;">if</span>(i &lt; 4)
+      {
+        boxArray[i].Color = 0xF800;
+        DrawBox(&amp;boxArray[i]);
+      }
+    }
+
+}
+<span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">scene 01 ALL OUT</span>
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">Button3OnClick</span>() {
+  <span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">i</span>;
+
+  <span style="color: #00af00;">if</span>(dali_state == NO_ACTION)
+    DALI_Send_Cmd(0x00, RECALL_MAX_LEVEL, GROUP_ADDRESS, FOLLOWING_COMMAND);
+
+  <span style="color: #00af00;">for</span>(i = 0; i &lt; 10; i++)
+  {
+     <span style="color: #00af00;">if</span>(i &lt; 6)
+     {
+       lightArray[i]._on = TRUE;
+       circleArray[i].Color = 0xFFE0;
+       DrawCircle(&amp;circleArray[i]);
+     }
+     <span style="color: #00af00;">else</span>
+     {
+       lightArray[i]._on = FALSE;
+       boxArray[i - 6].Color = 0xF800;
+       DrawBox(&amp;boxArray[i - 6]);
+     }
+  }
+}
+<span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">scene 02 ALL IN</span>
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">Button4OnClick</span>() {
+  <span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">i</span>;
+
+  <span style="color: #00af00;">if</span>(dali_state == NO_ACTION)
+    DALI_Send_Cmd(0x01, RECALL_MAX_LEVEL, GROUP_ADDRESS, FOLLOWING_COMMAND);
+
+  <span style="color: #00af00;">for</span>(i = 0; i &lt; 10; i++)
+  {
+     <span style="color: #00af00;">if</span>(i &lt; 6)
+     {
+       lightArray[i]._on = FALSE;
+       circleArray[i].Color = 0xF800;
+       DrawCircle(&amp;circleArray[i]);
+     }
+     <span style="color: #00af00;">else</span>
+     {
+       lightArray[i]._on = TRUE;
+       boxArray[i - 6].Color = 0xFFE0;
+       DrawBox(&amp;boxArray[i - 6]);
+     }
+  }
+}
+<span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">scene 03 CORNER OUT</span>
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">Button5OnClick</span>() {
+  <span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">i</span>;
+
+  <span style="color: #00af00;">if</span>(dali_state == NO_ACTION)
+    DALI_Send_Cmd(0x02, RECALL_MAX_LEVEL, GROUP_ADDRESS, FOLLOWING_COMMAND);
+
+  <span style="color: #00af00;">for</span>(i = 0; i &lt; 10; i++)
+  {
+     <span style="color: #00af00;">if</span>(i == 0 || i == 1 || i == 3 || i == 4)
+     {
+       lightArray[i]._on = TRUE;
+       circleArray[i].Color = 0xFFE0;
+       DrawCircle(&amp;circleArray[i]);
+     }
+     <span style="color: #00af00;">else</span> <span style="color: #00af00;">if</span>(i == 2 || i == 5)
+     {
+       lightArray[i]._on = FALSE;
+       circleArray[i].Color = 0xF800;
+       DrawCircle(&amp;circleArray[i]);
+     }
+     <span style="color: #00af00;">else</span>
+     {
+       lightArray[i]._on = FALSE;
+       boxArray[i - 6].Color = 0xF800;
+       DrawBox(&amp;boxArray[i - 6]);
+     }
+  }
+}
+<span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">scene 04 FRONT OUT/IN</span>
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">Button6OnClick</span>() {
+  <span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">i</span>;
+
+  <span style="color: #00af00;">if</span>(dali_state == NO_ACTION)
+    DALI_Send_Cmd(0x03, RECALL_MAX_LEVEL, GROUP_ADDRESS, FOLLOWING_COMMAND);
+
+  <span style="color: #00af00;">for</span>(i = 0; i &lt; 10; i++)
+  {
+     <span style="color: #00af00;">if</span>(i == 0 || i == 4 || i == 5)
+     {
+       lightArray[i]._on = TRUE;
+       circleArray[i].Color = 0xFFE0;
+       DrawCircle(&amp;circleArray[i]);
+     }
+     <span style="color: #00af00;">else</span>
+     <span style="color: #00af00;">if</span> (i &lt; 6)
+     {
+       lightArray[i]._on = FALSE;
+       circleArray[i].Color = 0xF800;
+       DrawCircle(&amp;circleArray[i]);
+     }
+     <span style="color: #00af00;">if</span>((i == 6 || i == 7 || i == 8))
+     {
+       lightArray[i]._on = TRUE;
+       boxArray[i - 6].Color = 0xFFE0;
+       DrawBox(&amp;boxArray[i - 6]);
+     }
+     <span style="color: #00af00;">else</span>
+     <span style="color: #00af00;">if</span>(i &gt; 5)
+     {
+       lightArray[i]._on = FALSE;
+       boxArray[i - 6].Color = 0xFFE0;
+       DrawBox(&amp;boxArray[i - 6]);
+     }
+  }
+}
+<span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">scene 05 BACK OUT/IN</span>
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">Button7OnClick</span>() {
+  <span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">i</span>;
+
+  <span style="color: #00af00;">if</span>(dali_state == NO_ACTION)
+    DALI_Send_Cmd(0x04, RECALL_MAX_LEVEL, GROUP_ADDRESS, FOLLOWING_COMMAND);
+
+  <span style="color: #00af00;">for</span>(i = 0; i &lt; 10; i++)
+  {
+     <span style="color: #00af00;">if</span>(i == 1 || i == 2 || i == 3)
+     {
+       lightArray[i]._on = TRUE;
+       circleArray[i].Color = 0xFFE0;
+       DrawCircle(&amp;circleArray[i]);
+     }
+     <span style="color: #00af00;">else</span>
+     <span style="color: #00af00;">if</span> (i &lt; 6)
+     {
+       lightArray[i]._on = FALSE;
+       circleArray[i].Color = 0xF800;
+       DrawCircle(&amp;circleArray[i]);
+     }
+     <span style="color: #00af00;">if</span>(i == 9)
+     {
+       lightArray[i]._on = TRUE;
+       boxArray[i - 6].Color = 0xFFE0;
+       DrawBox(&amp;boxArray[i - 6]);
+     }
+     <span style="color: #00af00;">else</span>
+     <span style="color: #00af00;">if</span> (i &gt; 5)
+     {
+       lightArray[i]._on = FALSE;
+       boxArray[i - 6].Color = 0xF800;
+       DrawBox(&amp;boxArray[i - 6]);
+     }
+  }
+}
+<span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">scene 06 CORNER OUT/IN</span>
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">Button8OnClick</span>() {
+  <span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">i</span>;
+
+  <span style="color: #00af00;">if</span>(dali_state == NO_ACTION)
+    DALI_Send_Cmd(0x05, RECALL_MAX_LEVEL, GROUP_ADDRESS, FOLLOWING_COMMAND);
+
+  <span style="color: #00af00;">for</span>(i = 0; i &lt; 10; i++)
+  {
+     <span style="color: #00af00;">if</span>(i == 0 || i == 1 || i == 3 || i == 4)
+     {
+       lightArray[i]._on = TRUE;
+       circleArray[i].Color = 0xFFE0;
+       DrawCircle(&amp;circleArray[i]);
+     }
+     <span style="color: #00af00;">else</span>
+     <span style="color: #00af00;">if</span> (i &lt; 6)
+     {
+       lightArray[i]._on = FALSE;
+       circleArray[i].Color = 0xF800;
+       DrawCircle(&amp;circleArray[i]);
+     }
+     <span style="color: #00af00;">if</span>(i &gt; 5)
+     {
+       lightArray[i]._on = TRUE;
+       boxArray[i - 6].Color = 0xFFE0;
+       DrawBox(&amp;boxArray[i - 6]);
+     }
+  }
+}
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">CircleLightOut01OnClick</span>() {
+   ToggleLight(0, 0, 0);
+}
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">CircleLightOut02OnClick</span>() {
+   ToggleLight(1, 1, 0);
+}
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">CircleLightOut03OnClick</span>() {
+   ToggleLight(2, 2, 0);
+}
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">CircleLightOut04OnClick</span>() {
+   ToggleLight(3, 3, 0);
+}
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">CircleLightOut05OnClick</span>() {
+   ToggleLight(4, 4, 0);
+}
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">CircleLightOut06OnClick</span>() {
+   ToggleLight(5, 5, 0);
+}
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">BoxLightIn01OnClick</span>() {
+  ToggleLight(6, 0, 1);
+}
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">BoxLightIn02OnClick</span>() {
+  ToggleLight(7, 1, 1);
+}
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">BoxLightIn03OnClick</span>() {
+  ToggleLight(8, 2, 1);
+}
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">BoxLightIn04OnClick</span>() {
+  ToggleLight(9, 3, 1);
+}
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">Button10OnClick</span>() {
+
+  InitialiseLights();
+  InitialiseCommands();
+  DrawScreen(&amp;Screen1);
+  <span style="color: #00af00;">if</span>(dali_state == NO_ACTION)
+    DALI_Send_Cmd(ADDRESS01, RECALL_MAX_LEVEL, BROADCAST_CMD, FOLLOWING_COMMAND);
+}
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">BtnSetArcOnClick</span>() {
+
+  InitialiseLights();
+  drawScreen(&amp;Screen3);
+
+  setArcLvlIndexBallastSelected = 0;
+
+  <span style="color: #00af00;">if</span>(dali_state == NO_ACTION)
+  {
+    DALI_Send_Cmd(ADDRESS01, RECALL_MAX_LEVEL, BROADCAST_CMD, FOLLOWING_COMMAND);
+  }
+}
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">ButtonRound3OnClick</span>() {
+   <span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">i</span>;
+
+   <span style="color: #00af00;">for</span>(i = 0; i &lt; 10; i++)
+    {
+      lightArray[i]._on = TRUE;
+      lightArray[i]._arcLevel = 254;
+      <span style="color: #00af00;">if</span>(i &lt; 6)
+      {
+        circleArray[i].Color = 0xFFE0;
+        DrawCircle(&amp;circleArray[i]);
+      }
+      <span style="color: #00af00;">if</span>(i &lt; 4)
+      {
+        boxArray[i].Color = 0xFFE0;
+        DrawBox(&amp;boxArray[i]);
+      }
+    }
+
+  drawScreen(&amp;Screen2);
+}
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">BtnBackSceneOnClick</span>() {
+  drawScreen(&amp;Screen2);
+}
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">BtnSetSceneLevelOnClick</span>() {
+  InitialiseLights();
+
+  setSceneIndexBallastSelected = 0;
+  setSceneIndexSceneSelected   = 0;
+  setSceneSceneLevel           = 0;
+
+  ShortToStr(lightArray[0]._address, btnBallastAddressText.Caption);
+  ShortToStr(setSceneIndexSceneSelected, btnSceneNumberText.Caption);
+
+  drawScreen(&amp;ScreenSetScene);
+}
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">BtnBackSetLightsOnClick</span>() {
+  drawScreen(&amp;Screen2);
+}
+
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">BtnBalAddrUpOnClick</span>() {
+   <span style="color: #00af00;">if</span>(setSceneIndexBallastSelected &lt; 9)
+   {
+     setSceneIndexBallastSelected++;
+     ShortToStr(lightArray[setSceneIndexBallastSelected]._address, btnBallastAddressText.Caption);
+     DrawRoundButton(&amp;btnBallastAddressText);
+   }
+}
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">BtnBalAddrDownOnClick</span>() {
+   <span style="color: #00af00;">if</span>(setSceneIndexBallastSelected &gt; 0)
+   {
+     setSceneIndexBallastSelected--;
+     ShortToStr(lightArray[setSceneIndexBallastSelected]._address, btnBallastAddressText.Caption);
+     DrawRoundButton(&amp;btnBallastAddressText);
+   }
+}
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">BtnSceneNumDownOnClick</span>() {
+   <span style="color: #00af00;">if</span>(setSceneIndexSceneSelected &gt; 0)
+   {
+     setSceneIndexSceneSelected--;
+     ShortToStr(setSceneIndexSceneSelected, btnSceneNumberText.Caption);
+     DrawRoundButton(&amp;btnSceneNumberText);
+   }
+}
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">BtnSceneNumUpOnClick</span>() {
+   <span style="color: #00af00;">if</span>(setSceneIndexSceneSelected &lt; 15)
+   {
+     setSceneIndexSceneSelected++;
+     ShortToStr(setSceneIndexSceneSelected, btnSceneNumberText.Caption);
+     DrawRoundButton(&amp;btnSceneNumberText);
+   }
+}
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">BtnSetSceneBallastOnClick</span>() {
+   <span style="color: #00af00;">if</span> (dali_state == NO_ACTION)
+   {
+     <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">posalji komandu da snimi za selektovani balast i scenu odgovarajucu vrednost</span>
+     DALI_Send_Cmd(setSceneIndexBallastSelected, (GO_TO_SCENE01 + setSceneIndexSceneSelected), SHORT_ADDRESS, FOLLOWING_COMMAND);
+   }
+}
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">BtnArcLevelDownOnClick</span>() {
+
+   <span style="color: #00af00;">if</span>(dali_state == NO_ACTION)
+   {
+     <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">DALI_Send_Cmd(ADDRESS08, STEP_DOWN, SHORT_ADDRESS, FOLLOWING_COMMAND);</span>
+     DALI_Send_Cmd(lightArray[setArcLvlIndexBallastSelected]._address, STEP_DOWN, SHORT_ADDRESS, FOLLOWING_COMMAND);
+
+     <span style="color: #00af00;">if</span> ((lightArray[setArcLvlIndexBallastSelected]._arcLevel - 7) &gt; 1){
+
+       lightArray[setArcLvlIndexBallastSelected]._arcLevel -= 7; <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">default value for MIN_LEVEL</span>
+     }
+     <span style="color: #00af00;">else</span>
+     {
+       lightArray[setArcLvlIndexBallastSelected]._arcLevel = 1;
+     }
+     IntToStr(lightArray[setArcLvlIndexBallastSelected]._arcLevel, BtnBallastArcLevel.Caption);
+
+     DrawRoundButton(&amp;BtnBallastArcLevel);
+   }
+}
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">BtnArcLevelUpOnClick</span>() {
+   <span style="color: #00af00;">if</span>(dali_state == NO_ACTION)
+   {
+     <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">DALI_Send_Cmd(ADDRESS08, STEP_UP, SHORT_ADDRESS, FOLLOWING_COMMAND);</span>
+     DALI_Send_Cmd(lightArray[setArcLvlIndexBallastSelected]._address, STEP_UP, SHORT_ADDRESS, FOLLOWING_COMMAND);
+
+     <span style="color: #00af00;">if</span> ((lightArray[setArcLvlIndexBallastSelected]._arcLevel + 7) &lt; 254){
+
+       lightArray[setArcLvlIndexBallastSelected]._arcLevel += 7; <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">value for MIN_LEVEL</span>
+     }
+     <span style="color: #00af00;">else</span>
+     {
+       lightArray[setArcLvlIndexBallastSelected]._arcLevel = 254;
+     }
+     IntToStr(lightArray[setArcLvlIndexBallastSelected]._arcLevel, BtnBallastArcLevel.Caption);
+
+     DrawRoundButton(&amp;BtnBallastArcLevel);
+   }
+}
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">Circle6OnClick</span>() {
+   setArcLvlIndexBallastSelected = 5;
+
+   IntToStr(lightArray[5]._arcLevel, BtnBallastArcLevel.Caption);
+   DrawRoundButton(&amp;BtnBallastArcLevel);
+
+   GraphicsSelectLight(setArcLvlIndexBallastSelected);
+   Circle6.Color = 0xFFFF;
+   DrawCircle(&amp;Circle6);
+}
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">GraphicsSelectLight</span>(<span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">SelectlightId</span>)
+{
+  <span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">i</span>;
+
+  <span style="color: #00af00;">for</span>(i = 0; i &lt; 10; i++)
+  {
+    <span style="color: #00af00;">if</span>(i != SelectlightId)
+    {
+      <span style="color: #00af00;">if</span>(i &lt; 6)
+      {
+        circleArcArray[i].Color = 0xFFE0;
+        DrawCircle(&amp;circleArcArray[i]);
+      }
+      <span style="color: #00af00;">else</span>
+      {
+        boxArcArray[i - 6].Color = 0xFFE0;
+        DrawBox(&amp;boxArcArray[i - 6]);
+      }
+    }
+  }
+}
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">Box1OnClick</span>() {
+   setArcLvlIndexBallastSelected = 6;
+
+   GraphicsSelectLight(setArcLvlIndexBallastSelected);
+
+   Box1.Color = 0xFFFF;
+   DrawBox(&amp;Box1);
+
+   IntToStr(lightArray[setArcLvlIndexBallastSelected]._arcLevel, BtnBallastArcLevel.Caption);
+   DrawButton(&amp;BtnBallastArcLevel);
+}
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">BtnSendQueryCmdOnClick</span>() {
+
+  InitialiseLights();
+
+  setQueryBallastSelected = 0;
+
+  ShortToStr(setQueryBallastSelected, BtnSelectBallastQuery.caption);
+
+  DrawScreen(&amp;ScreenQueries);
+}
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">BtnBackQueriesOnClick</span>() {
+  DrawScreen(&amp;Screen2);
+}
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">BtnQueryActualLevelOnClick</span>() {
+  <span style="color: #00af00;">if</span>(dali_state == NO_ACTION)
+  {
+    DALI_Send_Cmd(lightArray[setQueryBallastSelected]._address, QUERY_ACTUAL_LEVEL, SHORT_ADDRESS, FOLLOWING_COMMAND);
+  }
+}
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">BtnQueryBallastOnClick</span>() {
+  <span style="color: #00af00;">if</span>(dali_state == NO_ACTION)
+  {
+    DALI_Send_Cmd(lightArray[setQueryBallastSelected]._address, QUERY_BALLAST, SHORT_ADDRESS, FOLLOWING_COMMAND);
+  }
+}
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">BtnQueryDeviceTypeOnClick</span>() {
+  <span style="color: #00af00;">if</span>(dali_state == NO_ACTION)
+  {
+    DALI_Send_Cmd(lightArray[setQueryBallastSelected]._address, QUERY_DEVICE_TYPE, SHORT_ADDRESS, FOLLOWING_COMMAND);
+  }
+}
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">BtnQueryGroup0_7OnClick</span>() {
+  <span style="color: #00af00;">if</span>(dali_state == NO_ACTION)
+  {
+    DALI_Send_Cmd(lightArray[setQueryBallastSelected]._address, QUERY_GROUPS_0_7, SHORT_ADDRESS, FOLLOWING_COMMAND);
+  }
+}
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">BtnQueryGroup8_15OnClick</span>() {
+  <span style="color: #00af00;">if</span>(dali_state == NO_ACTION)
+  {
+    DALI_Send_Cmd(lightArray[setQueryBallastSelected]._address, QUERY_GROUPS_8_15, SHORT_ADDRESS, FOLLOWING_COMMAND);
+  }
+}
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">BtnScreenQueriesBalUpOnClick</span>() {
+  <span style="color: #00af00;">if</span>(setQueryBallastSelected &lt; 9)
+  {
+     setQueryBallastSelected++;
+     ShortToStr(lightArray[setQueryBallastSelected]._address, BtnSelectBallastQuery.Caption);
+     DrawRoundButton(&amp;BtnSelectBallastQuery);
+   }
+}
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">BtnScreenQueriesBalDownOnClick</span>() {
+  <span style="color: #00af00;">if</span>(setQueryBallastSelected &gt; 0)
+  {
+     setQueryBallastSelected--;
+     ShortToStr(lightArray[setQueryBallastSelected]._address, BtnSelectBallastQuery.Caption);
+     DrawRoundButton(&amp;BtnSelectBallastQuery);
+   }
+}
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">Circle1OnClick</span>() {
+   setArcLvlIndexBallastSelected = 0;
+
+   IntToStr(lightArray[0]._arcLevel, BtnBallastArcLevel.Caption);
+   DrawRoundButton(&amp;BtnBallastArcLevel);
+
+   GraphicsSelectLight(setArcLvlIndexBallastSelected);
+   Circle1.Color = 0xFFFF;
+   DrawCircle(&amp;Circle1);
+}
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">Circle2OnClick</span>() {
+   setArcLvlIndexBallastSelected = 1;
+
+   IntToStr(lightArray[1]._arcLevel, BtnBallastArcLevel.Caption);
+   DrawRoundButton(&amp;BtnBallastArcLevel);
+
+   GraphicsSelectLight(setArcLvlIndexBallastSelected);
+   Circle2.Color = 0xFFFF;
+   DrawCircle(&amp;Circle2);
+}
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">Circle3OnClick</span>() {
+   setArcLvlIndexBallastSelected = 2;
+
+   IntToStr(lightArray[2]._arcLevel, BtnBallastArcLevel.Caption);
+   DrawRoundButton(&amp;BtnBallastArcLevel);
+
+   GraphicsSelectLight(setArcLvlIndexBallastSelected);
+   Circle3.Color = 0xFFFF;
+   DrawCircle(&amp;Circle3);
+}
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">Circle4OnClick</span>() {
+   setArcLvlIndexBallastSelected = 3;
+
+   IntToStr(lightArray[3]._arcLevel, BtnBallastArcLevel.Caption);
+   DrawRoundButton(&amp;BtnBallastArcLevel);
+
+   GraphicsSelectLight(setArcLvlIndexBallastSelected);
+   Circle4.Color = 0xFFFF;
+   DrawCircle(&amp;Circle4);
+}
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">Circle5OnClick</span>() {
+   setArcLvlIndexBallastSelected = 4;
+
+   IntToStr(lightArray[4]._arcLevel, BtnBallastArcLevel.Caption);
+   DrawRoundButton(&amp;BtnBallastArcLevel);
+
+   GraphicsSelectLight(setArcLvlIndexBallastSelected);
+   Circle5.Color = 0xFFFF;
+   DrawCircle(&amp;Circle5);
+}
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">Box2OnClick</span>() {
+   setArcLvlIndexBallastSelected = 7;
+
+   GraphicsSelectLight(setArcLvlIndexBallastSelected);
+
+   Box2.Color = 0xFFFF;
+   DrawBox(&amp;Box2);
+
+   IntToStr(lightArray[setArcLvlIndexBallastSelected]._arcLevel, BtnBallastArcLevel.Caption);
+   DrawButton(&amp;BtnBallastArcLevel);
+}
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">Box3OnClick</span>() {
+   setArcLvlIndexBallastSelected = 8;
+
+   GraphicsSelectLight(setArcLvlIndexBallastSelected);
+
+   Box3.Color = 0xFFFF;
+   DrawBox(&amp;Box3);
+
+   IntToStr(lightArray[setArcLvlIndexBallastSelected]._arcLevel, BtnBallastArcLevel.Caption);
+   DrawButton(&amp;BtnBallastArcLevel);
+}
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">Box4OnClick</span>() {
+   setArcLvlIndexBallastSelected = 9;
+
+   GraphicsSelectLight(setArcLvlIndexBallastSelected);
+
+   Box4.Color = 0xFFFF;
+   DrawBox(&amp;Box4);
+
+   IntToStr(lightArray[setArcLvlIndexBallastSelected]._arcLevel, BtnBallastArcLevel.Caption);
+   DrawButton(&amp;BtnBallastArcLevel);
+}
+
+<span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">set default values - only for testing</span>
+<span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">real app must first read ballasts actual arc valuea, and if the ballast has</span>
+<span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">the value, it must get and set that value</span>
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">InitialiseLights</span>(<span style="color: #18b2b2;">void</span>)
+{
+  <span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">i</span>;
+  <span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">lightCount</span> = 0;
+
+  lightOut01._address  = ADDRESS01;
+  lightOut01._on       = FALSE;
+  lightOut01._arcLevel = 254;
+  lightOut01._group0_7    = 0x2D;
+  lightOut01._group8_15    = 0;
+
+  lightArray[0]       = lightOut01;
+  circleArray[0]      = CircleLightOut01;
+
+  circleArcArray[0]   = Circle1;
+
+  lightOut02._address  = ADDRESS02;
+  lightOut02._on       = FALSE;
+  lightOut02._arcLevel = 254;
+  lightOut02._group0_7    = 0x35;
+  lightOut02._group8_15   = 0;
+
+  lightArray[1]       = lightOut02;
+  circleArray[1]      = CircleLightOut02;
+
+  circleArcArray[1]   = Circle2;
+
+  lightOut03._address  = ADDRESS03;
+  lightOut03._on       = FALSE;
+  lightOut03._arcLevel = 254;
+  lightOut03._group0_7    = 0x11;
+  lightOut03._group8_15    = 0;
+
+  lightArray[2]       = lightOut03;
+  circleArray[2]      = CircleLightOut03;
+
+  circleArcArray[2]   = Circle3;
+
+  lightOut04._address  = ADDRESS04;
+  lightOut04._on       = FALSE;
+  lightOut04._arcLevel = 254;
+  lightOut04._group0_7    = 0x15;
+  lightOut04._group8_15   = 0;
+
+  lightArray[3]       = lightOut04;
+  circleArray[3]      = CircleLightOut04;
+
+  circleArcArray[3]   = Circle4;
+
+  lightOut05._address  = ADDRESS05;
+  lightOut05._on       = FALSE;
+  lightOut05._arcLevel = 254;
+  lightOut05._group0_7    = 0x29;
+  lightOut05._group8_15   = 0;
+
+  lightArray[4]       = lightOut05;
+  circleArray[4]      = CircleLightOut05;
+
+  circleArcArray[4]   = Circle5;
+
+  lightOut06._address  = ADDRESS06;   <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">hw specific</span>
+  lightOut06._on       = FALSE;
+  lightOut06._arcLevel = 254;
+  lightOut06._group0_7    = 0x2D;
+  lightOut06._group8_15   = 0;
+
+  lightArray[5]       = lightOut06;
+  circleArray[5]      = CircleLightOut06;
+
+  circleArcArray[5]   = Circle6;
+
+  lightIn01._address  = ADDRESS07;    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">hw specific</span>
+  lightIn01._on       = FALSE;
+  lightIn01._arcLevel = 254;
+  lightIn01._group0_7    = 0x2A;
+  lightIn01._group8_15   = 0;
+
+  lightArray[6]      = lightIn01;
+  boxArray[0]        = BoxLightIn01;
+
+  boxArcArray[0]     = Box1;
+
+  lightIn02._address  = ADDRESS08;
+  lightIn02._on       = FALSE;
+  lightIn02._arcLevel = 254;
+  lightIn02._group0_7    = 0x2A;
+  lightIn02._group8_15   = 0;
+
+  lightArray[7]      = lightIn02;
+  boxArray[1]        = BoxLightIn02;
+
+  boxArcArray[1]     = Box2;
+
+  lightIn03._address  = ADDRESS09;
+  lightIn03._on       = FALSE;
+  lightIn03._arcLevel = 254;
+  lightIn03._group0_7    = 0x2A;
+  lightIn03._group8_15   = 0;
+
+  lightArray[8]      = lightIn03;
+  boxArray[2]        = BoxLightIn03;
+
+  boxArcArray[2]     = Box3;
+
+  lightIn04._address  = ADDRESS10;
+  lightIn04._on       = FALSE;
+  lightIn04._arcLevel = 254;
+  lightIn04._group0_7    = 0x3A;
+  lightIn04._group8_15   = 0;
+
+  lightArray[9]      = lightIn04;
+  boxArray[3]        = BoxLightIn04;
+
+  boxArcArray[3]     = Box4;
+}
+
+</pre>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Foo X. Bar</p>
+<p class="date">Created: 2018-01-09 Di 16:24</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

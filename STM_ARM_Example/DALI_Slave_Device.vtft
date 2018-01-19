@@ -1,0 +1,582 @@
+object TatDiagram
+  NettoExportOffset = 1
+  AutomaticNodes = False
+  AutoScroll = True
+  AutoPage = False
+  Background.Scroll = True
+  Background.Style = biTile
+  Background.Visible = False
+  Background.Gradient.Direction = grTopBottom
+  Background.Gradient.StartColor = clWhite
+  Background.Gradient.EndColor = clYellow
+  Background.Gradient.Visible = False
+  Background.PrintGradient = False
+  SnapGrid.Active = True
+  SnapGrid.Force = True
+  SnapGrid.Visible = False
+  SnapGrid.SizeX = 1.000000000000000000
+  SnapGrid.SizeY = 1.000000000000000000
+  SnapGrid.Style = gsLines
+  SnapGrid.SnapToRuler = True
+  ShowLinkPoints = False
+  LeftRuler.Visible = False
+  LeftRuler.Divisions = 5
+  LeftRuler.Font.Charset = DEFAULT_CHARSET
+  LeftRuler.Font.Color = clWindowText
+  LeftRuler.Font.Height = -9
+  LeftRuler.Font.Name = 'Arial'
+  LeftRuler.Font.Style = []
+  LeftRuler.Units = unMili
+  LeftRuler.MinorTickLength = 4
+  LeftRuler.MajorTickLength = 6
+  LeftRuler.Color = clWhite
+  LeftRuler.TickColor = clBlack
+  LeftRuler.Size = 16
+  LeftRuler.AutoFactor = True
+  LeftRuler.GridColor = clBlack
+  TopRuler.Visible = False
+  TopRuler.Divisions = 5
+  TopRuler.Font.Charset = DEFAULT_CHARSET
+  TopRuler.Font.Color = clWindowText
+  TopRuler.Font.Height = -9
+  TopRuler.Font.Name = 'Arial'
+  TopRuler.Font.Style = []
+  TopRuler.Units = unMili
+  TopRuler.MinorTickLength = 4
+  TopRuler.MajorTickLength = 6
+  TopRuler.Color = clWhite
+  TopRuler.TickColor = clBlack
+  TopRuler.Size = 16
+  TopRuler.AutoFactor = True
+  TopRuler.GridColor = clBlack
+  Zoom = 160
+  BorderColor = clGray
+  VertScrollBar.Smooth = True
+  MouseWheelMode = mwOff
+  ActiveLayers = 5
+  Layers = <
+    item
+      LayerName = 'Layer0'
+    end>
+  LinkCursor = crHandPoint
+  PanCursor = crHandPoint
+  ZoomCursor = crSizeNS
+  IgnoreScreenDPI = False
+  ShowCrossIndicators = True
+  PageLines.Visible = False
+  PageLines.Pen.Color = clMaroon
+  PageLines.Pen.Mode = pmBlack
+  PageLines.Pen.Style = psDot
+  KeyActions = [kaEscape, kaMove, kaPage, kaResize, kaSelect]
+  HandlesStyle = hsVisio
+  SmoothMode = smAntiAlias
+  TextRenderingMode = tmAntiAlias
+  SelectionMode = slmMultiple
+  CanMoveOutOfBounds = False
+  PageSettings.PaperName = '320x240'
+  PageSettings.PaperId = 1
+  PageSettings.PaperWidth = 84.931250000000000000
+  PageSettings.PaperHeight = 63.764583333333320000
+  PageSettings.Orientation = dpoPortrait
+  PageSettings.LeftMarginStr = '0'
+  PageSettings.TopMarginStr = '0'
+  PageSettings.RightMarginStr = '0'
+  PageSettings.BottomMarginStr = '0'
+  RulerAutoUnit = True
+  MeasUnit = duMili
+  WheelZoom = True
+  WheelZoomIncrement = 10
+  WheelZoomMin = 50
+  WheelZoomMax = 1000
+  BorderStyle = bsSingle
+  Color = 2031616
+  ParentColor = False
+  ExplicitWidth = 200
+  ExplicitHeight = 200
+  object lblAnsBoxClear: TDgrBox
+    Tag = 1
+    Left = 6.000000000000000000
+    Top = 185.000000000000000000
+    Width = 174.000000000000000000
+    Height = 28.000000000000000000
+    Brush.Style = bsClear
+    SelBrush.Style = bsClear
+    Color = 2031616
+    SelColor = 2031616
+    ClipText = False
+    TextCells = <
+      item
+        DControlAngle = True
+        Width = 100.000000000000000000
+        Height = 100.000000000000000000
+        Clip = False
+        WordWrap = True
+        DControlFont = True
+        Alignment = taCenter
+        VertAlign = vaCenter
+        RotateFont = True
+        CellFrame.Color = clWhite
+        CellFrame.Transparent = True
+        CellFrame.AutoFrame = False
+        CellFrame.AutoFrameMargin = 0
+        CellFrame.Visible = False
+        Visible = True
+        Transparency = 0
+      end>
+    Restrictions = [crNoRotation]
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    DiagramFont = False
+    MinWidth = 5
+    MinHeight = 5
+    Shadow.Visible = False
+    Shadow.Color = clGray
+    Shadow.HOffset = 2
+    Shadow.VOffset = 1
+    Shadow.Transparency = 0
+    Hint = 
+      'lblAnsBoxClear'#13#10#13#10'Left      :     6'#13#10'Top      :     185'#13#10'Width  ' +
+      ':     174'#13#10'Height :     28'
+    ParentShowHint = True
+    Gradient.Direction = grTopBottom
+    Gradient.StartColor = clWhite
+    Gradient.EndColor = clSilver
+    Gradient.Visible = False
+    BitmapMode = bmStretch
+    BitmapTransparent = False
+    MetaFile.Data = {04000000}
+    PictureMode = pmStretch
+    Transparent = False
+    Cursor = crDefault
+    Visible = True
+    Layer = 0
+    LayerName = 'Layer0'
+    Transparency = 0
+    GradientBackup = False
+    PressColor = clBlack
+    PressColorEnabled = False
+    Static_ = False
+    Collapsed = False
+  end
+  object lblCmdBoxClear: TDgrBox
+    Tag = 1
+    Left = 3.000000000000000000
+    Top = 29.000000000000000000
+    Width = 174.000000000000000000
+    Height = 28.000000000000000000
+    Brush.Style = bsClear
+    SelBrush.Style = bsClear
+    Color = 2031616
+    SelColor = 2031616
+    ClipText = False
+    TextCells = <
+      item
+        DControlAngle = True
+        Width = 100.000000000000000000
+        Height = 100.000000000000000000
+        Clip = False
+        WordWrap = True
+        DControlFont = True
+        Alignment = taCenter
+        VertAlign = vaCenter
+        RotateFont = True
+        CellFrame.Color = clWhite
+        CellFrame.Transparent = True
+        CellFrame.AutoFrame = False
+        CellFrame.AutoFrameMargin = 0
+        CellFrame.Visible = False
+        Visible = True
+        Transparency = 0
+      end>
+    Restrictions = [crNoRotation]
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    DiagramFont = False
+    MinWidth = 5
+    MinHeight = 5
+    Shadow.Visible = False
+    Shadow.Color = clGray
+    Shadow.HOffset = 2
+    Shadow.VOffset = 1
+    Shadow.Transparency = 0
+    Hint = 
+      'lblCmdBoxClear'#13#10#13#10'Left      :     3'#13#10'Top      :     29'#13#10'Width  :' +
+      '     174'#13#10'Height :     28'
+    ParentShowHint = True
+    Gradient.Direction = grTopBottom
+    Gradient.StartColor = clWhite
+    Gradient.EndColor = clSilver
+    Gradient.Visible = False
+    BitmapMode = bmStretch
+    BitmapTransparent = False
+    MetaFile.Data = {04000000}
+    PictureMode = pmStretch
+    Transparent = False
+    Cursor = crDefault
+    Visible = True
+    Layer = 0
+    LayerName = 'Layer0'
+    Transparency = 0
+    GradientBackup = False
+    PressColor = clBlack
+    PressColorEnabled = False
+    Static_ = False
+    Collapsed = False
+  end
+  object lblReceivedCommand: TDgrLabel
+    Tag = 1
+    Left = 10.000000000000000000
+    Top = 9.000000000000000000
+    Width = 116.638177871704100000
+    Height = 17.316406250000000000
+    Brush.Style = bsClear
+    SelBrush.Style = bsClear
+    Color = clWhite
+    SelColor = clWhite
+    Shape = bsNoShape
+    LinkPoints = <>
+    ClipText = False
+    TextCells = <
+      item
+        DControlAngle = True
+        Width = 100.000000000000000000
+        Height = 100.000000000000000000
+        Text = 'Received Command'
+        Clip = False
+        WordWrap = False
+        DControlFont = True
+        Alignment = taCenter
+        VertAlign = vaCenter
+        RotateFont = True
+        CellFrame.Color = clWhite
+        CellFrame.Transparent = True
+        CellFrame.AutoFrame = False
+        CellFrame.AutoFrameMargin = 0
+        CellFrame.Visible = False
+        Visible = True
+        Transparency = 0
+      end>
+    Restrictions = [crNoResize, crNoRotation]
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clAqua
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    DiagramFont = False
+    MinWidth = 40
+    MinHeight = 40
+    Shadow.Visible = False
+    Shadow.Color = clGray
+    Shadow.HOffset = 0
+    Shadow.VOffset = 1
+    Shadow.Transparency = 0
+    ParentShowHint = True
+    Hint = 'lblReceivedCommand'#13#10#13#10'Left      :     10'#13#10'Top      :     9'
+    Gradient.Direction = grTopBottom
+    Gradient.StartColor = clWhite
+    Gradient.EndColor = clYellow
+    Gradient.Visible = False
+    BitmapMode = bmStretch
+    BitmapTransparent = False
+    Metafile.Data = {04000000}
+    PictureMode = pmStretch
+    Transparent = False
+    Cursor = crDefault
+    Visible = True
+    Layer = 0
+    LayerName = 'Layer0'
+    Transparency = 0
+    PressColor = clBlack
+    Static_ = False
+    StartChar = 32
+    EndChar = 127
+    Collapsed = False
+  end
+  object lblCommandAddr: TDgrLabel
+    Tag = 1
+    Left = 10.000000000000000000
+    Top = 33.000000000000000000
+    Width = 46.648923873901370000
+    Height = 17.316406250000000000
+    Brush.Style = bsClear
+    SelBrush.Style = bsClear
+    Color = clWhite
+    SelColor = clWhite
+    Shape = bsNoShape
+    LinkPoints = <>
+    ClipText = False
+    TextCells = <
+      item
+        DControlAngle = True
+        Width = 100.000000000000000000
+        Height = 100.000000000000000000
+        Text = 'Address'
+        Clip = False
+        WordWrap = False
+        DControlFont = True
+        Alignment = taCenter
+        VertAlign = vaCenter
+        RotateFont = True
+        CellFrame.Color = clWhite
+        CellFrame.Transparent = True
+        CellFrame.AutoFrame = False
+        CellFrame.AutoFrameMargin = 0
+        CellFrame.Visible = False
+        Visible = True
+        Transparency = 0
+      end>
+    Restrictions = [crNoResize, crNoRotation]
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clAqua
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    DiagramFont = False
+    MinWidth = 40
+    MinHeight = 40
+    Shadow.Visible = False
+    Shadow.Color = clGray
+    Shadow.HOffset = 0
+    Shadow.VOffset = 1
+    Shadow.Transparency = 0
+    ParentShowHint = True
+    Hint = 'lblCommandAddr'#13#10#13#10'Left      :     10'#13#10'Top      :     33'
+    Gradient.Direction = grTopBottom
+    Gradient.StartColor = clWhite
+    Gradient.EndColor = clYellow
+    Gradient.Visible = False
+    BitmapMode = bmStretch
+    BitmapTransparent = False
+    Metafile.Data = {04000000}
+    PictureMode = pmStretch
+    Transparent = False
+    Cursor = crDefault
+    Visible = True
+    Layer = 0
+    LayerName = 'Layer0'
+    Transparency = 0
+    PressColor = clBlack
+    Static_ = False
+    StartChar = 32
+    EndChar = 127
+    Collapsed = False
+  end
+  object lblCommandCMD: TDgrLabel
+    Tag = 1
+    Left = 64.000000000000000000
+    Top = 33.000000000000000000
+    Width = 26.691892623901370000
+    Height = 17.316406250000000000
+    Brush.Style = bsClear
+    SelBrush.Style = bsClear
+    Color = clWhite
+    SelColor = clWhite
+    Shape = bsNoShape
+    LinkPoints = <>
+    ClipText = False
+    TextCells = <
+      item
+        DControlAngle = True
+        Width = 100.000000000000000000
+        Height = 100.000000000000000000
+        Text = 'Cmd'
+        Clip = False
+        WordWrap = False
+        DControlFont = True
+        Alignment = taCenter
+        VertAlign = vaCenter
+        RotateFont = True
+        CellFrame.Color = clWhite
+        CellFrame.Transparent = True
+        CellFrame.AutoFrame = False
+        CellFrame.AutoFrameMargin = 0
+        CellFrame.Visible = False
+        Visible = True
+        Transparency = 0
+      end>
+    Restrictions = [crNoResize, crNoRotation]
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clAqua
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    DiagramFont = False
+    MinWidth = 40
+    MinHeight = 40
+    Shadow.Visible = False
+    Shadow.Color = clGray
+    Shadow.HOffset = 0
+    Shadow.VOffset = 1
+    Shadow.Transparency = 0
+    ParentShowHint = True
+    Hint = 'lblCommandCMD'#13#10#13#10'Left      :     64'#13#10'Top      :     33'
+    Gradient.Direction = grTopBottom
+    Gradient.StartColor = clWhite
+    Gradient.EndColor = clYellow
+    Gradient.Visible = False
+    BitmapMode = bmStretch
+    BitmapTransparent = False
+    Metafile.Data = {04000000}
+    PictureMode = pmStretch
+    Transparent = False
+    Cursor = crDefault
+    Visible = True
+    Layer = 0
+    LayerName = 'Layer0'
+    Transparency = 0
+    PressColor = clBlack
+    Static_ = False
+    StartChar = 32
+    EndChar = 127
+    Collapsed = False
+  end
+end
+
+SCREEN_SECTION
+
+	ScreenName=Screen1
+		CurrentLayer=0
+		StartScreen=True
+		StaticScreen=False
+		ScreenColor=$001F0000
+		ScreenOrientation=0
+		ScreenShowGrid=False
+		ScreenGridColor=clBlack
+
+	ScreenCount=1
+	ActiveScreen=Screen1
+
+SCREEN_SECTION_END
+
+PROJECT_INFO_START
+
+VERSION       = 3
+BOARD         = EasyMx_PRO_v7_for_STM32_ARM
+COMPILER      = mikroC PRO for ARM
+CONTROLLER    = HX8347-D
+DIMENSIONS    = 320x240
+DEVICE        = STM32F407VG
+CLOCK         = 168
+TP_CHECKED    = False
+READX_ADCHNO  = 8
+READY_ADCHNO  = 9
+
+TFT_CONNECTION_START
+TFT_DataPort            = GPIOE_ODR
+TFT_RST                 = GPIOE_ODR.B8
+TFT_RS                  = GPIOE_ODR.B12
+TFT_CS                  = GPIOE_ODR.B15
+TFT_RD                  = GPIOE_ODR.B10
+TFT_WR                  = GPIOE_ODR.B11
+TFT_BLED                = GPIOE_ODR.B9
+TFT_CONNECTION_END
+
+TP_CONNECTION_START
+DRIVEY_UP               = GPIOB_ODR.B9
+DRIVEY_DOWN             = GPIOB_ODR.B0
+DRIVEX_LEFT             = GPIOB_ODR.B1
+DRIVEX_RIGHT            = GPIOB_ODR.B8
+TP_CONNECTION_END
+
+ADC_CODE_START
+void Init_ADC() {
+  ADC_Set_Input_Channel(_ADC_CHANNEL_8 | _ADC_CHANNEL_9);
+  ADC1_Init();
+  Delay_ms(100);
+}
+ADC_CODE_END
+
+INIT_MCU_CODE_START
+void Init_MCU() {
+  GPIO_Digital_Output(&GPIOE_BASE, _GPIO_PINMASK_9);
+  TFT_BLED = 1;
+  TFT_Set_Default_Mode();
+  TP_TFT_Set_Default_Mode();
+}
+INIT_MCU_CODE_END
+
+EXT_MEM_TYPE=MMC
+EXT_MEM_DECL_CODE_START
+// MMC/SD Connections
+sbit Mmc_Chip_Select           at GPIOD_ODR.B3;
+// end of MMC/SD
+// TFT Get Data globals
+char Ext_Data_Buffer[512];
+unsigned long currentSector = -1, res_file_size;
+// end of TFT Get Data
+EXT_MEM_DECL_CODE_END
+
+INIT_EXT_MEM_CODE_START
+void Init_Ext_Mem() {
+  // Initialize SPI
+SPI3_Init_Advanced(_SPI_FPCLK_DIV64, _SPI_MASTER | _SPI_8_BIT |
+						 _SPI_CLK_IDLE_LOW | _SPI_FIRST_CLK_EDGE_TRANSITION |
+						 _SPI_MSB_FIRST | _SPI_SS_DISABLE | _SPI_SSM_ENABLE | _SPI_SSI_1,
+						 &_GPIO_MODULE_SPI3_PC10_11_12);
+  Delay_ms(10);
+  //--- init the FAT library
+  if (!Mmc_Fat_Init()) {
+    SPI3_CR1 = 0;
+    // reinitialize spi at higher speed
+    SPI3_Init_Advanced(_SPI_FPCLK_DIV2, _SPI_MASTER | _SPI_8_BIT |
+     				   _SPI_CLK_IDLE_LOW | _SPI_FIRST_CLK_EDGE_TRANSITION |
+	   				   _SPI_MSB_FIRST | _SPI_SS_DISABLE | _SPI_SSM_ENABLE | _SPI_SSI_1,
+	   				   &_GPIO_MODULE_SPI3_PC10_11_12);
+    // Open resource file for read
+    Mmc_Fat_Assign("%FILE_NAME", 0);
+    Mmc_Fat_Reset(&res_file_size);
+  }
+}
+INIT_EXT_MEM_CODE_END
+
+GET_DATA_CODE_START
+char* TFT_Get_Data(unsigned long offset, unsigned long count, unsigned long *num) {
+unsigned long start_sector;
+unsigned int pos;
+
+  start_sector = Mmc_Get_File_Write_Sector() + offset/512;
+  pos = (unsigned long)offset%512;
+
+  if(start_sector == currentSector+1) {
+    Mmc_Multi_Read_Sector(Ext_Data_Buffer);
+    currentSector = start_sector;
+  } else if (start_sector != currentSector) {
+    if(currentSector != -1)
+      Mmc_Multi_Read_Stop();
+    Mmc_Multi_Read_Start(start_sector);
+    Mmc_Multi_Read_Sector(Ext_Data_Buffer);
+    currentSector = start_sector;
+  }
+
+  if(count>512-pos)
+    *num = 512-pos;
+  else
+    *num = count;
+
+  return Ext_Data_Buffer+pos;
+}
+GET_DATA_CODE_END
+
+THRESHOLD     = 1500
+XMIN          = 239
+XMAX          = 3700
+YMIN          = 224
+YMAX          = 3679
+CALIBRATION   = Manual
+TP_ENABLE     = 0
+
+RSRC_FORMAT   = CODE
+RSRC_JPEG2BMP = True
+RSRC_FILESYS  = True
+EXT_RSRC = False
+
+//FONT SPACE OPTIONS
+ONE_PIXEL_SPACE_WIDTH = True
+
+PROJECT_INFO_END

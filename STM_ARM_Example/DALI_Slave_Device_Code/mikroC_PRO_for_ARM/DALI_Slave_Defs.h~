@@ -1,0 +1,3 @@
+#include "DALI_Slave_Pub.h"
+
+extern LightObjectType lightLeds[10];

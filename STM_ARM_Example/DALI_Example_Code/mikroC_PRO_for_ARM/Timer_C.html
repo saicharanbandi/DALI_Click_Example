@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2017-12-19 Di 09:11 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Foo X. Bar" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div class="org-src-container">
+<pre class="src src-C"><span style="color: #b218b2;">#include</span> <span style="color: #ff1f8b;">&lt;DALI-pub.h&gt;</span>
+<span style="color: #b218b2;">#include</span> <span style="color: #ff1f8b;">&lt;Timer.h&gt;</span>
+
+
+<span style="color: #00af00;">volatile</span> <span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">timer_1ms_state</span>;
+<span style="color: #00af00;">volatile</span> <span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">int</span> <span style="color: #ff8700;">tick_count</span>;
+<span style="color: #00af00;">volatile</span> <span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">bit_count</span>;
+
+<span style="color: #00af00;">extern</span> <span style="color: #00af00;">volatile</span> <span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">dali_array_cmd</span>[17]; <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">regulat DALI command</span>
+<span style="color: #00af00;">extern</span> <span style="color: #00af00;">volatile</span> <span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">dali_array_receive_buffer</span>[9];
+
+<span style="color: #00af00;">extern</span> sfr <span style="color: #18b2b2;">sbit</span> <span style="color: #ff8700;">_OUT_LINE</span>;
+<span style="color: #00af00;">extern</span> sfr <span style="color: #18b2b2;">sbit</span> <span style="color: #ff8700;">_IN_LINE</span>;
+
+<span style="color: #b2b2b2; font-style: italic;">/*******************************************************************************</span>
+<span style="color: #b2b2b2; font-style: italic;">Function:       Timer_DALI_Init</span>
+
+<span style="color: #b2b2b2; font-style: italic;">Description:    Initialise Timer for DALI network</span>
+
+
+<span style="color: #b2b2b2; font-style: italic;">Note:           Timer 2 is in use</span>
+<span style="color: #b2b2b2; font-style: italic;">******************************************************************************</span><span style="color: #b2b2b2; font-style: italic;">*/</span>
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">Timer_DALI_Init</span>()
+{
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">reset out/in line pins</span>
+  _OUT_LINE = 1;
+  _IN_LINE  = 1;
+
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">reset tick and bit counters</span>
+  tick_count = 0;
+  bit_count = 0;
+
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">timer 2 register settings</span>
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">interrupt time ~ 104us</span>
+  RCC_APB1ENRbits.TIM2EN = 1;
+  TIM2_CR1bits.CEN = 0;
+  TIM2_PSC = 2900; <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">3400;</span>
+  TIM2_ARR = 5;     <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">4</span>
+  NVIC_IntEnable(IVT_INT_TIM2);
+  TIM2_DIERbits.UIE = 1;
+
+}
+
+
+<span style="color: #b2b2b2; font-style: italic;">/*******************************************************************************</span>
+<span style="color: #b2b2b2; font-style: italic;">Function:       Timer_Stop</span>
+<span style="color: #b2b2b2; font-style: italic;">Description:    Stop timer if it is active.</span>
+
+<span style="color: #b2b2b2; font-style: italic;">******************************************************************************</span><span style="color: #b2b2b2; font-style: italic;">*/</span>
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">Timer_Stop</span>(<span style="color: #18b2b2;">void</span>)
+{
+  <span style="color: #00af00;">if</span>(TIM2_CR1bits.CEN == 1)
+    TIM2_CR1bits.CEN = 0;
+}
+
+
+<span style="color: #b2b2b2; font-style: italic;">/*******************************************************************************</span>
+<span style="color: #b2b2b2; font-style: italic;">Function:       Timer_Start</span>
+<span style="color: #b2b2b2; font-style: italic;">Description:    Start timer if it is stopped</span>
+
+<span style="color: #b2b2b2; font-style: italic;">******************************************************************************</span><span style="color: #b2b2b2; font-style: italic;">*/</span>
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">Timer_Start</span>(<span style="color: #18b2b2;">void</span>)
+{
+  <span style="color: #00af00;">if</span>(TIM2_CR1bits.CEN == 0)
+    TIM2_CR1bits.CEN = 1;
+
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">reset tick and bit counters</span>
+  tick_count = 0;
+  bit_count = 0;
+}
+
+<span style="color: #b2b2b2; font-style: italic;">/*******************************************************************************</span>
+<span style="color: #b2b2b2; font-style: italic;">Function:       Timer_Set_Settling_Time</span>
+<span style="color: #b2b2b2; font-style: italic;">Description:    Check and set dali state for settling time.</span>
+
+<span style="color: #b2b2b2; font-style: italic;">Parameters:     settlingTimeType - type of the settling time</span>
+
+<span style="color: #b2b2b2; font-style: italic;">******************************************************************************</span><span style="color: #b2b2b2; font-style: italic;">*/</span>
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">Timer_Set_Settling_Time</span>(<span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">settlingTimeType</span>)
+{
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">check if timer is OFF</span>
+  <span style="color: #00af00;">if</span>(TIM2_CR1bits.CEN == 0)
+    TIM2_CR1bits.CEN = 1;
+
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">check if forward frame was sent</span>
+  <span style="color: #00af00;">if</span>(dali_state == FORWARD_FRAME_SENT)
+  {
+    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">reset timer tick counter</span>
+    tick_count = 0;
+
+    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">set type of settling time</span>
+    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">forward frame -&gt; forward frame</span>
+    <span style="color: #00af00;">if</span> (settlingTimeType == SETTLING_FF_TO_FF)
+      dali_state = SETTLING_FF_TO_FF;
+    <span style="color: #00af00;">else</span>
+    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">set type of settling time</span>
+    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">forward frame -&gt; backward frame</span>
+    <span style="color: #00af00;">if</span> (settlingTimeType == SETTLING_FF_TO_BF)
+      dali_state = SETTLING_FF_TO_BF;
+  }
+}
+
+<span style="color: #b2b2b2; font-style: italic;">/*******************************************************************************</span>
+<span style="color: #b2b2b2; font-style: italic;">Function:       Timer2_interrupt</span>
+<span style="color: #b2b2b2; font-style: italic;">Description:    Interrupt function for timer 2</span>
+
+<span style="color: #b2b2b2; font-style: italic;">******************************************************************************</span><span style="color: #b2b2b2; font-style: italic;">*/</span>
+
+<span style="color: #18b2b2;">void</span> <span style="color: #ef2929;">Timer2_interrupt</span>() <span style="color: #18b2b2;">iv</span> <span style="color: #ff8700;">IVT_INT_TIM2</span> {
+
+  <span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">i</span>;
+  <span style="color: #00af00;">volatile</span> <span style="color: #18b2b2;">unsigned</span> <span style="color: #18b2b2;">char</span> <span style="color: #ff8700;">pulsePosition</span>;
+
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">reset interrupt flag</span>
+  TIM2_SRbits.UIF = 0;
+
+
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">GPIOA_ODRbits.ODR4 = ~GPIOA_ODRbits.ODR4;</span>
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">if dali state is not idle</span>
+  <span style="color: #00af00;">if</span>(dali_state != NO_ACTION)
+  {
+    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">check if data is sending</span>
+    <span style="color: #00af00;">if</span>(dali_state == SENDING_DATA)
+    {
+      <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">send data to slave device</span>
+      DALI_Sending_Data();
+    }
+    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">receiving state - ready and receiving backward frame - 11 bits</span>
+    <span style="color: #00af00;">if</span>(dali_state == RECEIVING_DATA)
+    {
+      <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">check and receive data from IN line</span>
+      DALI_Receiving_Data();
+    }
+  }
+  <span style="color: #00af00;">else</span>  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">dali_state == NO_ACTION. Idle state</span>
+  {
+    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">if there is signal on both lines, set ERROR flag</span>
+    <span style="color: #b2b2b2; font-style: italic;">/*</span><span style="color: #b2b2b2; font-style: italic;">if(_IN_LINE == 0 &amp;&amp; _OUT_LINE == 0)</span>
+<span style="color: #b2b2b2; font-style: italic;">    {</span>
+<span style="color: #b2b2b2; font-style: italic;">      dali_state = ERR;</span>
+<span style="color: #b2b2b2; font-style: italic;">      return;</span>
+<span style="color: #b2b2b2; font-style: italic;">    }</span><span style="color: #b2b2b2; font-style: italic;">*/</span>
+    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">check if there is 1 in Input line</span>
+    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">this is the first (start) bit in backward frame</span>
+
+    <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">if(_IN_LINE == 0) //nema potrebe</span>
+    <span style="color: #b2b2b2; font-style: italic;">//  </span><span style="color: #b2b2b2; font-style: italic;">dali_state = RECEIVING_DATA;</span>
+  }
+
+  <span style="color: #00af00;">if</span>(dali_state == WAIT_FOR_BACKCHANNEL_TO_RECEIVE)
+  {
+    former_val = actual_val;
+    actual_val = _IN_LINE;
+
+    <span style="color: #00af00;">if</span>(tick_count &gt; 200) <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">timeout -&gt; max wait time 9.17 ~ 9.2ms</span>
+    {
+      <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">no response -&gt; answer 'NO'</span>
+      <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">set dali state to NO_ACTION - idle</span>
+      dali_state = NO_ACTION;
+      <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">there wasn't response from slave device... answer is 'NO' or 0000 0000</span>
+      <span style="color: #00af00;">for</span>(i = 0; i &lt; 8; i++)
+        dali_array_receive_buffer[i] = 0;
+    }
+    <span style="color: #00af00;">else</span>
+    {
+      <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">check if there is a difference in IN line</span>
+      <span style="color: #00af00;">if</span>(former_val != actual_val)
+      {
+        <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">set state to RECEIVING</span>
+        dali_state = RECEIVING_DATA;
+        tick_count = 0;
+        bit_count  = 0; <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">add start bit</span>
+      }
+    }
+
+    tick_count++;
+  }
+
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">settling time between forward -&gt; forward or backward -&gt; forward ~ 22 Te (2Te = 8 IT)</span>
+  <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">or forward -&gt; backward ~ 7 to 22Te</span>
+  <span style="color: #00af00;">if</span>(dali_state == SETTLING_FF_TO_BF || dali_state == SETTLING_FF_TO_FF)
+  {
+    <span style="color: #00af00;">if</span>(dali_state == SETTLING_FF_TO_FF)
+    {
+      <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">settling time finished (22Te = 88 IT)</span>
+      <span style="color: #00af00;">if</span>(tick_count &gt; 104) <span style="color: #b2b2b2; font-style: italic;">// </span><span style="color: #b2b2b2; font-style: italic;">-16</span>
+        dali_state = SETTLING_FF_TO_FF_FINISHED;
+    }
+
+    <span style="color: #00af00;">if</span>(dali_state == SETTLING_FF_TO_BF)
+    {
+      <span style="color: #b2b2b2; font-style: italic;">//</span><span style="color: #b2b2b2; font-style: italic;">settling time finished (7Te = 28 IT)</span>
+      <span style="color: #00af00;">if</span>(tick_count &gt; 28) <span style="color: #b2b2b2; font-style: italic;">// </span><span style="color: #b2b2b2; font-style: italic;">-16</span>
+        dali_state = SETTLING_FF_TO_BF_FINISHED;
+    }
+    tick_count++;
+  }
+}
+
+</pre>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Foo X. Bar</p>
+<p class="date">Created: 2017-12-19 Di 09:11</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

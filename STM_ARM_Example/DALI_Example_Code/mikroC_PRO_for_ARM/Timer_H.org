@@ -1,0 +1,13 @@
+#+BEGIN_SRC C
+/* Timer.h Master*/
+extern volatile unsigned char bit_count;
+extern volatile unsigned char tick_count;
+
+void Timer_DALI_Init(void);
+
+void Timer_Stop(void);
+void Timer_Start(void);
+
+void Timer_Set_Settling_Time(unsigned char settlingTimeType);
+
+#+END_SRC
